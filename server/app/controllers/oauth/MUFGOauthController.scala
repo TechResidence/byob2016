@@ -12,9 +12,9 @@ import scala.concurrent.duration.Duration
 
 class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
 
-  def clientID = "GcGqiJ5UrwK8wpEomuhghVLZnknCRWtW"
+  val clientID = "GcGqiJ5UrwK8wpEomuhghVLZnknCRWtW"
 
-  def clientSecret = "Ses97NrVJiKLSfpN"
+  val clientSecret = "Ses97NrVJiKLSfpN"
 
   def showSignIn = Action { implicit request =>
     val opt = request.session.get("access_token")
@@ -23,44 +23,27 @@ class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
   }
 
   def callBack() = Action { implicit request =>
-    println(request.)
-    val scope: Option[String] = None
-    val expire_in: Long = 0
-    val access_token: String = ""
+    Ok(views.html.mufgCallback())
+  }
 
+  def callBack2(scope: Option[String], expires_in: Long, access_token: String) = Action { implicit request =>
 
     println("start")
     println("scope: " + scope)
-    println("expire_in: " + expire_in)
+    println("expires_in: " + expires_in)
     println("access_token: " + access_token)
 
-    import play.api.libs.json._
-    val postBodyJson = Json.obj(
-      "client_id" -> toJson(clientID),
-      "client_secret" -> toJson(clientSecret),
-      "code" -> toJson(access_token)
-    )
-    println("postBody=" + postBodyJson)
+    val auth = "Bearer " + access_token
 
-    val responce = ws.url("https://github.com/login/oauth/access_token")
-      .withHeaders("Content-Type" ->  "application/json")
-      .withHeaders("Accept" ->  "application/json")
-      .post(postBodyJson.toString)
-    val ss = Await.result(responce, Duration.Inf)
-
-    println(ss.json)
-    val accessToken = (ss.json \ "access_token").asOpt[String].get
-    println(accessToken)
-
-    val sss = ws.url("https://api.github.com/user")
-      .withQueryString("access_token" ->  accessToken)
-      .withHeaders("Accept" ->  "application/json")
+    val sss = ws.url("http://demo-ap08-prod.apigee.net/v1/users/me")
+      .withHeaders("Accept" ->  "application/json", "Authorization" ->  auth)
       .get
+
     val user = Await.result(sss, Duration.Inf).json
     println(user)
 
     //WARNING: you should not use accessToken directly. it is just sample
-    Redirect("/mufg/signin", MOVED_PERMANENTLY).withSession("access_token" -> (user \ "login").asOpt[String].get)
+    Redirect("/mufg/signin", MOVED_PERMANENTLY).withSession("access_token" -> access_token)
   }
 
   def signOut = Action {

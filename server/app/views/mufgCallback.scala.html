@@ -1,0 +1,8 @@
+@()
+
+<script>
+    var uri = location.href;
+    console.log(uri);
+    var uri2 = uri.replace(/#/, "?").replace(/callback/, "callback2");
+    location.href=uri2;
+</script>
