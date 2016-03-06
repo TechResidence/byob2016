@@ -1,0 +1,11 @@
+@(clientID: String, opt: Option[String])(implicit flash: play.api.mvc.Flash)
+
+@if(opt.isDefined) {
+<h1>@opt.get</h1>
+} else {
+<h1>not login</h1>
+}
+
+<a class="btn btn-large" href="https://github.com/login/oauth/authorize?client_id=@clientID">Login with GitHub</a>
+
+<a href="/github/signout">sign out</a>

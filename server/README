@@ -1,0 +1,18 @@
+
+
+## abstract
+
+collect Play2 samples
+
+## contents
+
+- guice DI
+- Service Mock for Client test
+- Dao Mock for logic test
+- json get/post
+- query parameter (url included / query parameter)
+- file download/upload
+- async response (with akka)
+- html
+- chunk get/post
+- OauthAPI
