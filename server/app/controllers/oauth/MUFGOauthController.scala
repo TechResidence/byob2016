@@ -4,6 +4,7 @@ import javax.inject.Inject
 
 import play.api.libs.ws.WSClient
 import play.api.mvc.{Action, Controller}
+import play.core.routing.Route
 import play.libs.Json.toJson
 
 import scala.concurrent.Await
@@ -11,24 +12,33 @@ import scala.concurrent.duration.Duration
 
 class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
 
-  def clientID = "b2ba87dca40b71666b5a"
+  def clientID = "GcGqiJ5UrwK8wpEomuhghVLZnknCRWtW"
 
-  def clientSecret = "da5f60a1b3e039ab6d55c2a130f32679f661a6dd"
+  def clientSecret = "Ses97NrVJiKLSfpN"
 
   def showSignIn = Action { implicit request =>
     val opt = request.session.get("access_token")
 
-    Ok(views.html.githubSignin(clientID, opt))
+    Ok(views.html.mufgSignin(clientID, opt))
   }
 
-  def callBackGitHub(code: String) = Action { implicit request =>
+  def callBack() = Action { implicit request =>
+    println(request.)
+    val scope: Option[String] = None
+    val expire_in: Long = 0
+    val access_token: String = ""
+
 
     println("start")
+    println("scope: " + scope)
+    println("expire_in: " + expire_in)
+    println("access_token: " + access_token)
+
     import play.api.libs.json._
     val postBodyJson = Json.obj(
       "client_id" -> toJson(clientID),
       "client_secret" -> toJson(clientSecret),
-      "code" -> toJson(code)
+      "code" -> toJson(access_token)
     )
     println("postBody=" + postBodyJson)
 
@@ -50,11 +60,11 @@ class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
     println(user)
 
     //WARNING: you should not use accessToken directly. it is just sample
-    Redirect("/github/signin", MOVED_PERMANENTLY).withSession("access_token" -> (user \ "login").asOpt[String].get)
+    Redirect("/mufg/signin", MOVED_PERMANENTLY).withSession("access_token" -> (user \ "login").asOpt[String].get)
   }
 
   def signOut = Action {
-    Redirect("/github/signin").withNewSession.flashing(
+    Redirect("/mufg/signin").withNewSession.flashing(
       "success" -> "You are now logged out."
     )
   }

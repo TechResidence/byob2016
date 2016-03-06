@@ -1,0 +1,11 @@
+@(clientID: String, opt: Option[String])(implicit flash: play.api.mvc.Flash)
+
+@if(opt.isDefined) {
+<h1>@opt.get</h1>
+} else {
+<h1>not login</h1>
+}
+
+<a class="btn btn-large" href="https://demo-ap08-prod.apigee.net/oauth/authorize?redirect_uri=http://localhost:9000/mufg/callback&client_id=@clientID&response_type=token">Login with MUFG</a>
+
+<a href="/mufg/signout">sign out</a>
