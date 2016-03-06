@@ -43,12 +43,22 @@ class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
     println(user)
 
     //WARNING: you should not use accessToken directly. it is just sample
-    Redirect("/mufg/signin", MOVED_PERMANENTLY).withSession("access_token" -> access_token)
+    Redirect("/mufg/api", MOVED_PERMANENTLY).withSession("access_token" -> access_token)
   }
 
   def signOut = Action {
     Redirect("/mufg/signin").withNewSession.flashing(
       "success" -> "You are now logged out."
     )
+  }
+
+  def api() = Action { request =>
+    val opt = request.session.get("access_token")
+    opt match {
+      case None => Redirect("/mufg/signin").withNewSession.flashing(
+        "success" -> "You are now logged out."
+      )
+      case Some(u) => Ok(views.html.mufgAPI(u))
+    }
   }
 }
