@@ -2,6 +2,7 @@ package controllers.oauth
 
 import javax.inject.Inject
 
+import play.api.libs.json.Json
 import play.api.libs.ws.WSClient
 import play.api.mvc.{Action, Controller}
 import play.core.routing.Route
@@ -33,15 +34,6 @@ class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
     println("expires_in: " + expires_in)
     println("access_token: " + access_token)
 
-    val auth = "Bearer " + access_token
-
-    val sss = ws.url("http://demo-ap08-prod.apigee.net/v1/users/me")
-      .withHeaders("Accept" ->  "application/json", "Authorization" ->  auth)
-      .get
-
-    val user = Await.result(sss, Duration.Inf).json
-    println(user)
-
     //WARNING: you should not use accessToken directly. it is just sample
     Redirect("/mufg/api", MOVED_PERMANENTLY).withSession("access_token" -> access_token)
   }
@@ -60,5 +52,31 @@ class MUFGOauthController @Inject()(ws: WSClient) extends Controller {
       )
       case Some(u) => Ok(views.html.mufgAPI(u))
     }
+  }
+
+  def users() = Action { request =>
+    val access_token = request.session.get("access_token").get
+
+    val auth = "Bearer " + access_token
+
+    val sss = ws.url("http://demo-ap08-prod.apigee.net/v1/users")
+      .withHeaders("Accept" ->  "application/json", "Authorization" ->  auth)
+      .get
+
+    val user = Await.result(sss, Duration.Inf).json
+    Ok(user)
+  }
+
+  def userMe() = Action { request =>
+    val access_token = request.session.get("access_token").get
+
+    val auth = "Bearer " + access_token
+
+    val sss = ws.url("http://demo-ap08-prod.apigee.net/v1/users/me")
+      .withHeaders("Accept" ->  "application/json", "Authorization" ->  auth)
+      .get
+
+    val user = Await.result(sss, Duration.Inf).json
+    Ok(user)
   }
 }
