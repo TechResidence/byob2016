@@ -1,5 +1,5 @@
 
-PAQQ_Adhoc->PAQQ->SwiftSideMenu.xcodeproj  
+pettypay->SwiftSideMenu.xcodeproj  
 
 CocoaPodsのインストール  
 
@@ -16,7 +16,7 @@ Setup completed (read-only access)
 =================== 
 CocoaPodsをつかう  
 1.使いたいプロジェクトファイルに移動  
-$ cd ~/paqq-client/PAQQ_Adhoc/PAQQ/  
+->pettypay  
 2.ライブラリのインストール  
 $ pod install  
 Analyzing dependencies  
