@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (3.2.0)
+  - CorePlot (2.0)
+  - EAIntroView (2.7.4):
+    - EARestrictedScrollView (~> 0.2.0)
+  - EARestrictedScrollView (0.2.0)
+  - JBChartView (3.0.6)
+  - MDCSwipeToChoose (0.2.3)
+  - RKNotificationHub (2.0.1)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - CorePlot
+  - EAIntroView (~> 2.7.0)
+  - JBChartView
+  - MDCSwipeToChoose
+  - RKNotificationHub
+  - SDWebImage (~> 3.7)
+  - SwiftyJSON (from `https://github.com/SwiftyJSON/SwiftyJSON.git`)
+
+EXTERNAL SOURCES:
+  SwiftyJSON:
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  SwiftyJSON:
+    :commit: 42bdb102d2624b143c07850ebdc1537d5b6579b6
+    :git: https://github.com/SwiftyJSON/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  CorePlot: b7f422ad363f2b0e48152471d6da45ce232eb8c6
+  EAIntroView: 50b85eedf414260e61330070ffe5947e72493a62
+  EARestrictedScrollView: f86d61e16c61d3e93c84f8e96e83122a2a3b7631
+  JBChartView: 5e4ab567158a45184bc26b295b06e7cb9cf38349
+  MDCSwipeToChoose: 56239d98b4558c66e7c3c9069482befd26092270
+  RKNotificationHub: d80905a948c79c11673345f807133a0bfd17e320
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3F72796EDF93C523A1E4EBCC1983BB10E6EAF9F1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3F72796EDF93C523A1E4EBCC1983BB10E6EAF9F1" : 0,
+    "80A5F46EA4FEC11A9621137B37747BFB3ECB3838" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C2F434D4-41DA-4139-8F14-96C121E99970",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3F72796EDF93C523A1E4EBCC1983BB10E6EAF9F1" : "paqq-client\/",
+    "80A5F46EA4FEC11A9621137B37747BFB3ECB3838" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftSideMenu",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "PAQQ_Adhoc\/PAQQ\/SwiftSideMenu.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:kokishimada\/paqq-client.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3F72796EDF93C523A1E4EBCC1983BB10E6EAF9F1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Asuka52\/DecoCamera.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80A5F46EA4FEC11A9621137B37747BFB3ECB3838"
+    }
+  ]
+}
