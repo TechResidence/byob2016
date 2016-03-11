@@ -109,7 +109,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1429137B19D979A50025188A /* Storyboard Example */ = {
+		1429137B19D979A50025188A /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				52917A151C71DA4A00FB4C96 /* Views */,
@@ -117,7 +117,7 @@
 				5C132588198E2A9A00CA49BE /* AppDelegate.swift */,
 				1429139419DAA9C00025188A /* Controllers */,
 			);
-			name = "Storyboard Example";
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 		1429139419DAA9C00025188A /* Controllers */ = {
@@ -183,8 +183,8 @@
 				52E99B8C1C7A347400CF2110 /* QuartzCore.h */,
 				52917A201C78E6DD00FB4C96 /* JBChartView.h */,
 				52917A1E1C78DF9900FB4C96 /* JBBarChartView.h */,
-				5C132585198E2A9A00CA49BE /* SwiftSideMenu */,
-				5C132598198E2A9A00CA49BE /* SwiftSideMenuTests */,
+				5C132585198E2A9A00CA49BE /* pettypay */,
+				5C132598198E2A9A00CA49BE /* pettypay */,
 				5C132584198E2A9A00CA49BE /* Products */,
 				F30C655112DC1F9360AA62B7 /* Pods */,
 				934F9CB01E7AB0EF5017056D /* Frameworks */,
@@ -200,12 +200,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5C132585198E2A9A00CA49BE /* SwiftSideMenu */ = {
+		5C132585198E2A9A00CA49BE /* pettypay */ = {
 			isa = PBXGroup;
 			children = (
 				52E99D5B1C8185BC00CF2110 /* csv */,
 				14EAB63A19DD4E95006A90FC /* Library */,
-				1429137B19D979A50025188A /* Storyboard Example */,
+				1429137B19D979A50025188A /* Storyboard */,
 				5C13258C198E2A9A00CA49BE /* Main.storyboard */,
 				52CB524E1C91C21900C13A45 /* DoneViewController.swift */,
 				5C7D78C11BAEEEC2002BD24B /* LaunchView.xib */,
@@ -213,6 +213,7 @@
 				5C132586198E2A9A00CA49BE /* Supporting Files */,
 				52917A0F1C717E8400FB4C96 /* SwiftSideMenu-Bridging-Header.h */,
 			);
+			name = pettypay;
 			path = SwiftSideMenu;
 			sourceTree = "<group>";
 		};
@@ -224,12 +225,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5C132598198E2A9A00CA49BE /* SwiftSideMenuTests */ = {
+		5C132598198E2A9A00CA49BE /* pettypay */ = {
 			isa = PBXGroup;
 			children = (
 				5C13259B198E2A9A00CA49BE /* SwiftSideMenuTests.swift */,
 				5C132599198E2A9A00CA49BE /* Supporting Files */,
 			);
+			name = pettypay;
 			path = SwiftSideMenuTests;
 			sourceTree = "<group>";
 		};
