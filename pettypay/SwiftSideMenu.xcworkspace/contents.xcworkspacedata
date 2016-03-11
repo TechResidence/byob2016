@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/asukakadowaki/app/byob2016/pettypay/pettypay.xcodeproj">
+      location = "group:SwiftSideMenu.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

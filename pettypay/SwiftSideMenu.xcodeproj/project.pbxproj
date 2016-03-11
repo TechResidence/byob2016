@@ -75,13 +75,13 @@
 		52E99D591C7C28E100CF2110 /* CheckAPIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAPIViewController.swift; sourceTree = "<group>"; };
 		52E99D5C1C81860B00CF2110 /* poll.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = poll.csv; sourceTree = "<group>"; };
 		581B1916B14C3927A24DE808 /* Pods-SwiftSideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSideMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSideMenu/Pods-SwiftSideMenu.release.xcconfig"; sourceTree = "<group>"; };
-		5C132583198E2A9A00CA49BE /* pettypay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pettypay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftSideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C132587198E2A9A00CA49BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C132588198E2A9A00CA49BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C13258A198E2A9A00CA49BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C13258D198E2A9A00CA49BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C13258F198E2A9A00CA49BE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5C132595198E2A9A00CA49BE /* pettypay.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pettypay.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftSideMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C13259A198E2A9A00CA49BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C13259B198E2A9A00CA49BE /* SwiftSideMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSideMenuTests.swift; sourceTree = "<group>"; };
 		5C6D6A261A7E26380047FE0D /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
@@ -194,8 +194,8 @@
 		5C132584198E2A9A00CA49BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5C132583198E2A9A00CA49BE /* pettypay.app */,
-				5C132595198E2A9A00CA49BE /* pettypay.xctest */,
+				5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */,
+				5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -275,9 +275,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		5C132582198E2A9A00CA49BE /* pettypay */ = {
+		5C132582198E2A9A00CA49BE /* SwiftSideMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "pettypay" */;
+			buildConfigurationList = 5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenu" */;
 			buildPhases = (
 				D132308D3539B6A750EDA15B /* Check Pods Manifest.lock */,
 				5C13257F198E2A9A00CA49BE /* Sources */,
@@ -291,14 +291,14 @@
 			);
 			dependencies = (
 			);
-			name = pettypay;
+			name = SwiftSideMenu;
 			productName = SwiftSideMenu;
-			productReference = 5C132583198E2A9A00CA49BE /* pettypay.app */;
+			productReference = 5C132583198E2A9A00CA49BE /* SwiftSideMenu.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5C132594198E2A9A00CA49BE /* pettypayTests */ = {
+		5C132594198E2A9A00CA49BE /* SwiftSideMenuTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "pettypayTests" */;
+			buildConfigurationList = 5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuTests" */;
 			buildPhases = (
 				5C132591198E2A9A00CA49BE /* Sources */,
 				5C132592198E2A9A00CA49BE /* Frameworks */,
@@ -309,9 +309,9 @@
 			dependencies = (
 				5C132597198E2A9A00CA49BE /* PBXTargetDependency */,
 			);
-			name = pettypayTests;
+			name = SwiftSideMenuTests;
 			productName = SwiftSideMenuTests;
-			productReference = 5C132595198E2A9A00CA49BE /* pettypay.xctest */;
+			productReference = 5C132595198E2A9A00CA49BE /* SwiftSideMenuTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +333,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "pettypay" */;
+			buildConfigurationList = 5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenu" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -346,8 +346,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5C132582198E2A9A00CA49BE /* pettypay */,
-				5C132594198E2A9A00CA49BE /* pettypayTests */,
+				5C132582198E2A9A00CA49BE /* SwiftSideMenu */,
+				5C132594198E2A9A00CA49BE /* SwiftSideMenuTests */,
 			);
 		};
 /* End PBXProject section */
@@ -462,7 +462,7 @@
 /* Begin PBXTargetDependency section */
 		5C132597198E2A9A00CA49BE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5C132582198E2A9A00CA49BE /* pettypay */;
+			target = 5C132582198E2A9A00CA49BE /* SwiftSideMenu */;
 			targetProxy = 5C132596198E2A9A00CA49BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -569,7 +569,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.test.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = pettypay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = MyHeaders;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/SwiftSideMenu/JBChartView-Bridging-Header.h";
 			};
@@ -585,7 +585,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.test.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = pettypay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = MyHeaders;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)/SwiftSideMenu/JBChartView-Bridging-Header.h";
 			};
@@ -608,7 +608,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.test.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = pettypay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -626,7 +626,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.test.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = pettypay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -634,7 +634,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "pettypay" */ = {
+		5C13257E198E2A9A00CA49BE /* Build configuration list for PBXProject "SwiftSideMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C13259D198E2A9A00CA49BE /* Debug */,
@@ -643,7 +643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "pettypay" */ = {
+		5C13259F198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1325A0198E2A9A00CA49BE /* Debug */,
@@ -652,7 +652,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "pettypayTests" */ = {
+		5C1325A2198E2A9A00CA49BE /* Build configuration list for PBXNativeTarget "SwiftSideMenuTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5C1325A3198E2A9A00CA49BE /* Debug */,

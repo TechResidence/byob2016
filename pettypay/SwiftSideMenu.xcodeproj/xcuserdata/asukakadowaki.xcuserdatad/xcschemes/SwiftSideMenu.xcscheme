@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-               BuildableName = "pettypay.app"
-               BlueprintName = "pettypay"
-               ReferencedContainer = "container:pettypay.xcodeproj">
+               BuildableName = "SwiftSideMenu.app"
+               BlueprintName = "SwiftSideMenu"
+               ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "5C132594198E2A9A00CA49BE"
-               BuildableName = "pettypay.xctest"
-               BlueprintName = "pettypayTests"
-               ReferencedContainer = "container:pettypay.xcodeproj">
+               BuildableName = "SwiftSideMenuTests.xctest"
+               BlueprintName = "SwiftSideMenuTests"
+               ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-            BuildableName = "pettypay.app"
-            BlueprintName = "pettypay"
-            ReferencedContainer = "container:pettypay.xcodeproj">
+            BuildableName = "SwiftSideMenu.app"
+            BlueprintName = "SwiftSideMenu"
+            ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-            BuildableName = "pettypay.app"
-            BlueprintName = "pettypay"
-            ReferencedContainer = "container:pettypay.xcodeproj">
+            BuildableName = "SwiftSideMenu.app"
+            BlueprintName = "SwiftSideMenu"
+            ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "5C132582198E2A9A00CA49BE"
-            BuildableName = "pettypay.app"
-            BlueprintName = "pettypay"
-            ReferencedContainer = "container:pettypay.xcodeproj">
+            BuildableName = "SwiftSideMenu.app"
+            BlueprintName = "SwiftSideMenu"
+            ReferencedContainer = "container:SwiftSideMenu.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
