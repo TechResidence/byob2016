@@ -1,6 +1,6 @@
 //
 //  ChooseItemView.swift
-//  SwiftSideMenu
+//  PettyPay
 //
 //  Created by AsukaKadowaki on 2016/02/15.
 //

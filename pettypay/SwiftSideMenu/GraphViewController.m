@@ -1,6 +1,6 @@
 //
 //  GraphViewController.m
-//  SwiftSideMenu
+//  PettyPay
 //
 //  Created by AsukaKadowaki on 2016/02/22.
 //  Copyright © 2016年 Evgeny Nazarov. All rights reserved.

@@ -9,7 +9,7 @@
         <!--ALL-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="VoteViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VoteViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VoteViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="VoteViewController" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -135,7 +135,7 @@
         <!--ALL-->
         <scene sceneID="sFC-b3-pR7">
             <objects>
-                <viewController title="ALL" id="wec-Zg-plM" customClass="ViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ALL" id="wec-Zg-plM" customClass="ViewController" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hId-VV-vAQ"/>
                         <viewControllerLayoutGuide type="bottom" id="Rwl-W0-W89"/>
@@ -187,7 +187,7 @@
         <!--Poll-->
         <scene sceneID="ZaE-bk-iww">
             <objects>
-                <viewController storyboardIdentifier="sample" title="Poll" id="gMT-kX-3ov" userLabel="Poll" customClass="ViewController2" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sample" title="Poll" id="gMT-kX-3ov" userLabel="Poll" customClass="ViewController2" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pS4-Ko-kwh"/>
                         <viewControllerLayoutGuide type="bottom" id="hT2-oc-fas"/>
@@ -264,7 +264,7 @@
         <!--Sign In-->
         <scene sceneID="U2O-Gc-gp6">
             <objects>
-                <viewController storyboardIdentifier="SignIn" title="SignIn" id="vmo-1u-jOC" userLabel="Sign In" customClass="SignIn" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" title="SignIn" id="vmo-1u-jOC" userLabel="Sign In" customClass="SignIn" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aZ1-a1-BcP"/>
                         <viewControllerLayoutGuide type="bottom" id="Pia-6A-Vjh"/>
@@ -592,7 +592,7 @@
         <!--Sign Up-->
         <scene sceneID="7sn-3Y-MdV">
             <objects>
-                <viewController storyboardIdentifier="SignUp" title="SignUp" id="6Ot-12-U3u" userLabel="Sign Up" customClass="SignUp" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" title="SignUp" id="6Ot-12-U3u" userLabel="Sign Up" customClass="SignUp" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UaZ-jL-PH8"/>
                         <viewControllerLayoutGuide type="bottom" id="lz5-8o-lK3"/>
@@ -792,7 +792,7 @@
         <!--Item-->
         <scene sceneID="cvg-r3-oiY">
             <objects>
-                <navigationController id="xKr-44-F3h" customClass="MyNavigationController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="xKr-44-F3h" customClass="MyNavigationController" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qnV-qS-iv7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="j84-05-NcZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -809,7 +809,7 @@
         <!--CheckAPI View Controller-->
         <scene sceneID="9SU-ZF-OoX">
             <objects>
-                <viewController id="2s6-fJ-uAf" customClass="CheckAPIViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2s6-fJ-uAf" customClass="CheckAPIViewController" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QTH-KG-Qfl"/>
                         <viewControllerLayoutGuide type="bottom" id="Ajh-ln-6pM"/>
@@ -891,7 +891,7 @@
         <!--Result-->
         <scene sceneID="vFC-22-Wq6">
             <objects>
-                <viewController storyboardIdentifier="Result" title="Result" id="ogf-C4-iqe" customClass="ViewResult" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Result" title="Result" id="ogf-C4-iqe" customClass="ViewResult" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yzm-AL-tKJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Sdj-r8-7Hi"/>
@@ -942,7 +942,7 @@
         <!--Poll-->
         <scene sceneID="VX5-1H-jmI">
             <objects>
-                <viewController storyboardIdentifier="new" title="New Poll" id="8Wj-Nw-nxO" userLabel="Poll" customClass="ViewNewPoll" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="new" title="New Poll" id="8Wj-Nw-nxO" userLabel="Poll" customClass="ViewNewPoll" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tS9-1P-IDI"/>
                         <viewControllerLayoutGuide type="bottom" id="fO2-xu-eVf"/>
@@ -1177,7 +1177,7 @@
         <!--Done View Controller-->
         <scene sceneID="nZd-Ic-cgC">
             <objects>
-                <viewController id="fco-JA-vC9" customClass="DoneViewController" customModule="SwiftSideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fco-JA-vC9" customClass="DoneViewController" customModule="pettypay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hbV-Ty-0JI"/>
                         <viewControllerLayoutGuide type="bottom" id="Gi0-Kv-YPm"/>
