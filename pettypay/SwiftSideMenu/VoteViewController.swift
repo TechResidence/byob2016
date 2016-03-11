@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class VoteViewController: UIViewController, ENSideMenuDelegate {
     
@@ -87,5 +88,13 @@ class VoteViewController: UIViewController, ENSideMenuDelegate {
         
     }
     
+    var player:AVAudioPlayer?
+    
+    @IBAction func play(sender: AnyObject) {
+        let soundPath = (NSBundle.mainBundle().bundlePath as NSString).stringByAppendingPathComponent("seikyu.mp3")
+        let url:NSURL? = NSURL.fileURLWithPath(soundPath)
+        player = try? AVAudioPlayer(contentsOfURL:url!)
+        player?.play()
+    }
 }
 

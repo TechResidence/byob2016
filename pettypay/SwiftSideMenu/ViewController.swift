@@ -213,7 +213,7 @@ class ViewController: UIViewController, ENSideMenuDelegate, MDCSwipeToChooseDele
                 id: "1",
                 title: "Aki Sumida",
                 contents: "本　3000円",
-                imageUrl: "http://893524273fa02092.lolipop.jp/poll_prof3.png",
+                imageUrl: "http://893524273fa02092.lolipop.jp/poll_prof2.png",
                 paybackTypes: ["review"],
                 reviewScore: "2",
                 lat: "35.666851",

@@ -24,6 +24,7 @@
 		52917A1F1C78DF9900FB4C96 /* JBBarChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52917A1E1C78DF9900FB4C96 /* JBBarChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52917A211C78E6DD00FB4C96 /* JBChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52917A201C78E6DD00FB4C96 /* JBChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52917A231C78E7E700FB4C96 /* JBLineChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52917A221C78E7E700FB4C96 /* JBLineChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52CB524F1C91C21900C13A45 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CB524E1C91C21900C13A45 /* DoneViewController.swift */; };
 		52E99B871C7A24BE00CF2110 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E99B861C7A24BE00CF2110 /* GraphViewController.m */; };
 		52E99B8B1C7A2D1000CF2110 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E99B8A1C7A2D1000CF2110 /* ViewController.m */; };
 		52E99B8D1C7A347400CF2110 /* QuartzCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 52E99B8C1C7A347400CF2110 /* QuartzCore.h */; };
@@ -67,6 +68,7 @@
 		52917A1E1C78DF9900FB4C96 /* JBBarChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JBBarChartView.h; path = Pods/JBChartView/Classes/Bar/JBBarChartView.h; sourceTree = "<group>"; };
 		52917A201C78E6DD00FB4C96 /* JBChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JBChartView.h; path = Pods/JBChartView/Classes/Base/JBChartView.h; sourceTree = "<group>"; };
 		52917A221C78E7E700FB4C96 /* JBLineChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JBLineChartView.h; path = Pods/JBChartView/Classes/Line/JBLineChartView.h; sourceTree = "<group>"; };
+		52CB524E1C91C21900C13A45 /* DoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
 		52E99B861C7A24BE00CF2110 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		52E99B8A1C7A2D1000CF2110 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		52E99B8C1C7A347400CF2110 /* QuartzCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuartzCore.h; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				14EAB63A19DD4E95006A90FC /* Library */,
 				1429137B19D979A50025188A /* Storyboard Example */,
 				5C13258C198E2A9A00CA49BE /* Main.storyboard */,
+				52CB524E1C91C21900C13A45 /* DoneViewController.swift */,
 				5C7D78C11BAEEEC2002BD24B /* LaunchView.xib */,
 				5C13258F198E2A9A00CA49BE /* Images.xcassets */,
 				5C132586198E2A9A00CA49BE /* Supporting Files */,
@@ -439,6 +442,7 @@
 				52917A191C71DC7400FB4C96 /* ImagelabelView.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
 				529179851C6F96D800FB4C96 /* SignUp.swift in Sources */,
+				52CB524F1C91C21900C13A45 /* DoneViewController.swift in Sources */,
 				5291798B1C6FAE6500FB4C96 /* ViewNewPoll.swift in Sources */,
 				529179831C6F96B400FB4C96 /* SignIn.swift in Sources */,
 				529179891C6FA74D00FB4C96 /* ViewResult.swift in Sources */,
