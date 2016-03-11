@@ -1,9 +1,9 @@
 //
 //  DoneViewController.swift
-//  PettyPay
+//  SwiftSideMenu
 //
 //  Created by AsukaKadowaki on 2016/03/10.
-//  
+//  Copyright © 2016年 Evgeny Nazarov. All rights reserved.
 //
 
 import UIKit
