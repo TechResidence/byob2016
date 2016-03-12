@@ -48,6 +48,22 @@ class ManagementViewController: UIViewController {
         }
         
         self.logic.fetchMe(logic)
+        
+        doTransferAPI()
+    }
+    
+    func doTransferAPI() {
+        let mufgApiLogic = MufgApiLogic()
+        
+        let logic:Dictionary<String, AnyObject> -> Void = {result in
+            print("transfer done!")
+            
+            let logic_:Dictionary<String, AnyObject> -> Void = {result2 in
+                print("approval done!")
+            }
+            mufgApiLogic.sendApproveRequest("3453746760", callback: logic_)
+        }
+        mufgApiLogic.sendTransferRequest("3453746760", toAccountId: "3450500775", amount: 1000, callback: logic)
     }
 
     /*
