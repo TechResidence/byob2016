@@ -53,7 +53,6 @@ class MufgApiLogic: NSObject {
         let completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void = { data, response, error in
             if (error == nil) {
                 let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-                print(result)
                 do {
                     let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as! Dictionary<String, AnyObject>
                     logic(json)
