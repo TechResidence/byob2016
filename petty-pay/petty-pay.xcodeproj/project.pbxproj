@@ -27,6 +27,8 @@
 		7D2CFB101C94323400073B5D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB0F1C94323400073B5D /* Item.swift */; };
 		7D2CFB121C94329600073B5D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB111C94329600073B5D /* Purchase.swift */; };
 		7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */; };
+		7D953F541C9452DE009403A2 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D953F531C9452DE009403A2 /* PeripheralManager.swift */; };
+		7D953F561C94531D009403A2 /* MalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D953F551C94531D009403A2 /* MalletViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		7D2CFB0F1C94323400073B5D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7D2CFB111C94329600073B5D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
 		7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTableViewCell.swift; sourceTree = "<group>"; };
+		7D953F531C9452DE009403A2 /* PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeripheralManager.swift; path = Classes/Managers/PeripheralManager.swift; sourceTree = "<group>"; };
+		7D953F551C94531D009403A2 /* MalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalletViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 		7D2CFAE31C93E42F00073B5D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7D953F521C9452A5009403A2 /* Managers */,
 				7D2CFAEF1C93EC7100073B5D /* AppDelegate.swift */,
 				7D2CFAEA1C93EC3700073B5D /* Controllers */,
 				7D2CFAEC1C93EC3700073B5D /* Models */,
@@ -144,6 +149,7 @@
 		7D2CFAEA1C93EC3700073B5D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7D953F551C94531D009403A2 /* MalletViewController.swift */,
 				7D2CFAF11C93FF7700073B5D /* ManagementViewController.swift */,
 				7D2CFAF31C93FF9300073B5D /* ApprovalViewController.swift */,
 				7D2CFAF51C93FFB600073B5D /* ChargeViewController.swift */,
@@ -187,6 +193,14 @@
 				7D2CFACC1C93D29C00073B5D /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		7D953F521C9452A5009403A2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7D953F531C9452DE009403A2 /* PeripheralManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +253,11 @@
 				TargetAttributes = {
 					7D2CFABF1C93D29C00073B5D = {
 						CreatedOnToolsVersion = 7.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					7D2CFAD31C93D29C00073B5D = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -303,7 +322,9 @@
 				7D2CFB0E1C942BFF00073B5D /* User.swift in Sources */,
 				7D2CFB121C94329600073B5D /* Purchase.swift in Sources */,
 				7D2CFAF21C93FF7700073B5D /* ManagementViewController.swift in Sources */,
+				7D953F561C94531D009403A2 /* MalletViewController.swift in Sources */,
 				7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */,
+				7D953F541C9452DE009403A2 /* PeripheralManager.swift in Sources */,
 				7D2CFAFA1C93FFD800073B5D /* ShopViewController.swift in Sources */,
 				7D2CFAF41C93FF9300073B5D /* ApprovalViewController.swift in Sources */,
 			);
