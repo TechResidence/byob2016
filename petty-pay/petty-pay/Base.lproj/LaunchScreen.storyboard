@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,46 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bk2" translatesAutoresizingMaskIntoConstraints="NO" id="nsH-b0-GTS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bk2" translatesAutoresizingMaskIntoConstraints="NO" id="nsH-b0-GTS">
                                 <rect key="frame" x="0.0" y="0.0" width="379" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="aAx-aR-n2c"/>
-                                    <constraint firstAttribute="width" constant="379" id="dyM-WC-BXx"/>
-                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name02" translatesAutoresizingMaskIntoConstraints="NO" id="ftm-sF-bWw">
-                                <rect key="frame" x="71" y="92" width="240" height="28"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="7E1-f0-gC7"/>
-                                    <constraint firstAttribute="height" constant="28" id="zhF-D8-kyr"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-Pe-NXB">
-                                <rect key="frame" x="100" y="173" width="183" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="183" id="8hh-T3-8wh"/>
-                                    <constraint firstAttribute="height" constant="45" id="P6i-iU-APd"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-V8-b5r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-V8-b5r">
                                 <rect key="frame" x="87" y="254" width="196" height="184"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="196" id="Cnr-vL-Wdp"/>
-                                    <constraint firstAttribute="height" constant="184" id="bEh-WQ-KFq"/>
-                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-Pe-NXB">
+                                <rect key="frame" x="106" y="226" width="162" height="40"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name02" translatesAutoresizingMaskIntoConstraints="NO" id="ftm-sF-bWw">
+                                <rect key="frame" x="69" y="135" width="240" height="28"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="80" id="4fX-dt-TqR"/>
-                            <constraint firstItem="nsH-b0-GTS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="9wP-Ec-7z4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JYV-Pe-NXB" secondAttribute="trailing" constant="72" id="M1T-i6-Hnz"/>
-                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="top" secondItem="JYV-Pe-NXB" secondAttribute="bottom" constant="36" id="OEA-Pa-iCT"/>
-                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="top" secondItem="ftm-sF-bWw" secondAttribute="bottom" constant="53" id="SFr-iN-kM4"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nsH-b0-GTS" secondAttribute="trailing" constant="-20" id="WEe-Jn-gB3"/>
-                            <constraint firstItem="ftm-sF-bWw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="72" id="jTs-Tk-0J8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ftm-sF-bWw" secondAttribute="trailing" constant="48" id="ow5-bM-zCI"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
