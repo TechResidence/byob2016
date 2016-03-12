@@ -26,11 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9i-z1-AXD" id="Gv4-FV-yms">
-<<<<<<< HEAD
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="103.5"/>
-=======
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
->>>>>>> 3cc1405acd6cc7497622ac08284eac2a5db8b711
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-Yj-HjG">
@@ -124,10 +120,6 @@
     </scenes>
     <resources>
         <image name="PettyPayIcon" width="1200" height="1200"/>
-<<<<<<< HEAD
         <image name="approval" width="30" height="23"/>
-=======
-        <image name="approval" width="50" height="50"/>
->>>>>>> 3cc1405acd6cc7497622ac08284eac2a5db8b711
     </resources>
 </document>
