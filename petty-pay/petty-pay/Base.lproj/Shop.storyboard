@@ -40,6 +40,6 @@
     </scenes>
     <resources>
         <image name="bk_small-1" width="110" height="29"/>
-        <image name="shop" width="50" height="50"/>
+        <image name="shop" width="30" height="30"/>
     </resources>
 </document>
