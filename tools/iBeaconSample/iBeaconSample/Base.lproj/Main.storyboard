@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--WebAPI View Controller-->
+        <scene sceneID="tTe-WH-84o">
+            <objects>
+                <viewController id="A80-rV-SvI" customClass="WebAPIViewController" customModule="iBeaconSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DEQ-7z-Fkh"/>
+                        <viewControllerLayoutGuide type="bottom" id="3kM-P4-iuB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EV9-u5-MdN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iuK-DK-9Z3">
+                                <rect key="frame" x="35" y="-9" width="600" height="580"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iuK-DK-9Z3" firstAttribute="leading" secondItem="EV9-u5-MdN" secondAttribute="leading" id="1dB-IK-TCh"/>
+                            <constraint firstAttribute="trailing" secondItem="iuK-DK-9Z3" secondAttribute="trailing" id="CdX-hT-SnF"/>
+                            <constraint firstItem="iuK-DK-9Z3" firstAttribute="top" secondItem="DEQ-7z-Fkh" secondAttribute="bottom" id="Oh7-md-FdZ"/>
+                            <constraint firstItem="3kM-P4-iuB" firstAttribute="top" secondItem="iuK-DK-9Z3" secondAttribute="bottom" id="cHe-1N-zdb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="iuK-DK-9Z3" id="qfA-Vr-mNC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oqs-fJ-Uud" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="272"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iBeaconSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="22I-oq-Odz">
+                                <rect key="frame" x="36" y="41" width="92" height="39"/>
+                                <state key="normal" title="Web Sample"/>
+                                <connections>
+                                    <segue destination="A80-rV-SvI" kind="show" id="iNY-ZZ-lYg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-M1-Kf9">
+                                <rect key="frame" x="35" y="114" width="61" height="30"/>
+                                <state key="normal" title="MyDetail"/>
+                                <connections>
+                                    <action selector="pushButton:" destination="BYZ-38-t0r" eventType="touchDown" id="1Tt-9x-hXu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN2-fa-49E">
+                                <rect key="frame" x="28" y="232" width="77" height="30"/>
+                                <state key="normal" title="MyAccount"/>
+                                <connections>
+                                    <action selector="fetchAccountDetail:" destination="BYZ-38-t0r" eventType="touchDown" id="rqF-GH-jlb"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="MyDetail will be filled" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VQW-fH-JSd">
+                                <rect key="frame" x="119" y="222" width="254" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="MyDetail will be filled" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cow-4u-i81">
+                                <rect key="frame" x="119" y="104" width="254" height="85"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="MyAccount" destination="VQW-fH-JSd" id="fVo-z7-11q"/>
+                        <outlet property="myUserTextView" destination="cow-4u-i81" id="Gqk-4h-AdW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="267"/>
+        </scene>
+    </scenes>
+</document>
