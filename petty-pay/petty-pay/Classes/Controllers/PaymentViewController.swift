@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import CoreMotion
 
 class PaymentViewController: UIViewController {
 
+	// Create Motion Manager and Handler
+	let motionManager = CMMotionManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		startMotionSensing()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +25,29 @@ class PaymentViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+	func startMotionSensing() {
+		if (!motionManager.accelerometerActive) {
+			motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler:accelermeterHandler)
+		}
+	}
+	
+	func stopMotionSensing() {
+		if (motionManager.accelerometerActive) {
+			   motionManager.stopAccelerometerUpdates()
+		}
+	}
+	
+	func accelermeterHandler(data:CMAccelerometerData?, error:NSError?) -> Void {
+		let acceleration = data!.acceleration
+		let x = acceleration.x
+		let y = acceleration.y
+		let z = acceleration.z
+		let m = sqrt(x * x + y * y + z * z)
+		if m > 5 {
+			print(m)
+			print("Go to Ryoshu-sho page")
+			motionManager.stopAccelerometerUpdates()
+		}
+	}
 
 }
