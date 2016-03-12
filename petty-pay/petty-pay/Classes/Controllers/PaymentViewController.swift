@@ -36,6 +36,20 @@ class PaymentViewController: UIViewController {
 			   motionManager.stopAccelerometerUpdates()
 		}
 	}
+    
+    func doTransferAPI() {
+        let mufgApiLogic = MufgApiLogic()
+        
+        let logic:NSData -> Void = {result in
+            print("transfer done!")
+            
+            let logic_:NSData -> Void = {result2 in
+                print("approval done!")
+            }
+            mufgApiLogic.sendApproveRequest("3453746760", callback: logic_)
+        }
+        mufgApiLogic.sendTransferRequest("3453746760", toAccountId: "3450500775", amount: 1000, callback: logic)
+    }
 	
 	func accelermeterHandler(data:CMAccelerometerData?, error:NSError?) -> Void {
 		let acceleration = data!.acceleration
@@ -45,6 +59,11 @@ class PaymentViewController: UIViewController {
 		let m = sqrt(x * x + y * y + z * z)
 		if m > 5 {
 			print(m)
+			print("Go to Ryoshu-sho page")
+            
+            //API start
+            doTransferAPI()
+            
 			motionManager.stopAccelerometerUpdates()
 			
 			let mainStoryboard: UIStoryboard = UIStoryboard(name: "Payment", bundle: nil)
