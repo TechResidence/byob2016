@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreMotion
+import AVFoundation
 
 class PaymentViewController: UIViewController {
 
@@ -59,7 +60,13 @@ class PaymentViewController: UIViewController {
 		let m = sqrt(x * x + y * y + z * z)
 		if m > 5 {
 			print(m)
-			print("Go to Ryoshu-sho page")
+            var player:AVAudioPlayer?
+            
+        let soundPath = (NSBundle.mainBundle().bundlePath as NSString).stringByAppendingPathComponent("coin.wav")
+        let url:NSURL? = NSURL.fileURLWithPath(soundPath)
+            player = try? AVAudioPlayer(contentsOfURL:url!)
+            player?.play()
+            
             
             //API start
             doTransferAPI()
