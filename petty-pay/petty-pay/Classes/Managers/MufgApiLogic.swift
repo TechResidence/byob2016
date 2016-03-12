@@ -27,7 +27,11 @@ class MufgApiLogic: NSObject {
     }
     
     func getHttpRequest(url:String, completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void)->Void{
-        let token = ud.objectForKey("token") as! String
+        let token = ud.objectForKey("token") as? String
+        
+        if token == nil {
+            return
+        }
         
         // create the url-request
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)
@@ -36,7 +40,7 @@ class MufgApiLogic: NSObject {
         request.HTTPMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         
-        let auth = "Bearer " + token
+        let auth = "Bearer " + token!
         print(auth)
         request.addValue(auth, forHTTPHeaderField: "Authorization")
         
