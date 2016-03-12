@@ -23,6 +23,10 @@
 		7D2CFB051C94096800073B5D /* Charge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB031C94096800073B5D /* Charge.storyboard */; };
 		7D2CFB081C94097D00073B5D /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB061C94097D00073B5D /* Payment.storyboard */; };
 		7D2CFB0B1C94099500073B5D /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB091C94099500073B5D /* Shop.storyboard */; };
+		7D2CFB0E1C942BFF00073B5D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB0D1C942BFF00073B5D /* User.swift */; };
+		7D2CFB101C94323400073B5D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB0F1C94323400073B5D /* Item.swift */; };
+		7D2CFB121C94329600073B5D /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB111C94329600073B5D /* Purchase.swift */; };
+		7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		7D2CFB041C94096800073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Charge.storyboard; sourceTree = "<group>"; };
 		7D2CFB071C94097D00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Payment.storyboard; sourceTree = "<group>"; };
 		7D2CFB0A1C94099500073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Shop.storyboard; sourceTree = "<group>"; };
+		7D2CFB0D1C942BFF00073B5D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7D2CFB0F1C94323400073B5D /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		7D2CFB111C94329600073B5D /* Purchase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +158,9 @@
 		7D2CFAEC1C93EC3700073B5D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7D2CFB0D1C942BFF00073B5D /* User.swift */,
+				7D2CFB0F1C94323400073B5D /* Item.swift */,
+				7D2CFB111C94329600073B5D /* Purchase.swift */,
 			);
 			name = Models;
 			path = Classes/Models;
@@ -158,6 +169,7 @@
 		7D2CFAED1C93EC3700073B5D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */,
 			);
 			name = Views;
 			path = Classes/Views;
@@ -284,10 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D2CFAF01C93EC7100073B5D /* AppDelegate.swift in Sources */,
+				7D2CFB101C94323400073B5D /* Item.swift in Sources */,
 				7D2CFAFC1C94007F00073B5D /* MainTabViewController.swift in Sources */,
 				7D2CFAF81C93FFCB00073B5D /* PaymentViewController.swift in Sources */,
 				7D2CFAF61C93FFB600073B5D /* ChargeViewController.swift in Sources */,
+				7D2CFB0E1C942BFF00073B5D /* User.swift in Sources */,
+				7D2CFB121C94329600073B5D /* Purchase.swift in Sources */,
 				7D2CFAF21C93FF7700073B5D /* ManagementViewController.swift in Sources */,
+				7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */,
 				7D2CFAFA1C93FFD800073B5D /* ShopViewController.swift in Sources */,
 				7D2CFAF41C93FF9300073B5D /* ApprovalViewController.swift in Sources */,
 			);
