@@ -24,7 +24,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FYu-20-j6l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2198" y="-3845"/>
+            <point key="canvasLocation" x="-7678" y="-5932"/>
         </scene>
         <!--Management-->
         <scene sceneID="LtF-FX-tAy">
@@ -34,7 +34,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJW-Dm-bQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2442.5" y="-3263"/>
+            <point key="canvasLocation" x="-7922.5" y="-5350"/>
         </scene>
         <!--Approval-->
         <scene sceneID="C5n-gg-EM9">
@@ -44,7 +44,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZF-oe-87P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2315" y="-3263"/>
+            <point key="canvasLocation" x="-7795" y="-5350"/>
         </scene>
         <!--Charge-->
         <scene sceneID="Gg6-mj-1uk">
@@ -54,7 +54,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N51-Se-CEq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2198" y="-3263"/>
+            <point key="canvasLocation" x="-7678" y="-5350"/>
         </scene>
         <!--Payment-->
         <scene sceneID="Wgt-l2-jPA">
@@ -64,7 +64,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bSe-wf-xDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2065.5" y="-3263"/>
+            <point key="canvasLocation" x="-7545.5" y="-5350"/>
         </scene>
         <!--Shop-->
         <scene sceneID="NCE-mB-7Ag">
@@ -74,7 +74,43 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ahd-fI-umb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1929.5" y="-3263"/>
+            <point key="canvasLocation" x="-7409.5" y="-5350"/>
+        </scene>
+        <!--Mallet View Controller-->
+        <scene sceneID="dGK-bj-tTq">
+            <objects>
+                <viewController id="37h-7M-9vy" customClass="MalletViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QDB-bW-qLr"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yzu-iH-rWc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OXO-au-DZf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Advertising" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYa-Pa-7SV">
+                                <rect key="frame" x="119" y="357" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-H4-hsp">
+                                <rect key="frame" x="214" y="352" width="51" height="31"/>
+                                <connections>
+                                    <action selector="advertise:" destination="37h-7M-9vy" eventType="valueChanged" id="N6U-SL-CL1"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="advertiseSwitch" destination="X8H-H4-hsp" id="Puh-lN-HyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgg-KN-pEV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-7041" y="-5910"/>
         </scene>
     </scenes>
 </document>

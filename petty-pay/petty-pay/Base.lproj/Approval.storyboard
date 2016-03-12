@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Approval-->
@@ -17,21 +18,108 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="承認だよ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JQ-Dk-oAh">
-                                <rect key="frame" x="283" y="290" width="68" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yXi-mb-mFE">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="approvalTableViewCellID" id="I9i-z1-AXD" customClass="ApprovalTableViewCell" customModule="petty_pay" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9i-z1-AXD" id="Gv4-FV-yms">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-Yj-HjG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="rSv-Yj-HjG" secondAttribute="height" multiplier="1:1" id="nCa-re-VUA"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="営業:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f4-da-ywX">
+                                                    <rect key="frame" x="477" y="8" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小口元気" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se7-ZL-Ugb">
+                                                    <rect key="frame" x="524" y="8" width="68" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="接待費" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjR-TH-YxP">
+                                                    <rect key="frame" x="541" y="37" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="購入:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtl-Vs-Oyl">
+                                                    <rect key="frame" x="477" y="37" width="39" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ut-yf-7ki">
+                                                    <rect key="frame" x="533" y="66" width="59" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="se7-ZL-Ugb" firstAttribute="leading" secondItem="6f4-da-ywX" secondAttribute="trailing" constant="8" id="3VA-p1-fgR"/>
+                                                <constraint firstItem="cjR-TH-YxP" firstAttribute="trailing" secondItem="se7-ZL-Ugb" secondAttribute="trailing" id="4rb-JO-y7S"/>
+                                                <constraint firstItem="cjR-TH-YxP" firstAttribute="centerY" secondItem="Xtl-Vs-Oyl" secondAttribute="centerY" id="5Ed-Mb-cNy"/>
+                                                <constraint firstItem="rSv-Yj-HjG" firstAttribute="top" secondItem="Gv4-FV-yms" secondAttribute="top" id="65X-GP-gIJ"/>
+                                                <constraint firstItem="Xtl-Vs-Oyl" firstAttribute="leading" secondItem="6f4-da-ywX" secondAttribute="leading" id="9MS-CU-ZSB"/>
+                                                <constraint firstItem="cjR-TH-YxP" firstAttribute="trailing" secondItem="8ut-yf-7ki" secondAttribute="trailing" id="GLy-Sq-gV0"/>
+                                                <constraint firstAttribute="trailing" secondItem="se7-ZL-Ugb" secondAttribute="trailing" constant="8" id="OWd-QK-lFT"/>
+                                                <constraint firstItem="cjR-TH-YxP" firstAttribute="trailing" secondItem="8ut-yf-7ki" secondAttribute="trailing" id="VV1-WY-qWc"/>
+                                                <constraint firstAttribute="bottom" secondItem="rSv-Yj-HjG" secondAttribute="bottom" id="Wt9-oC-9Sx"/>
+                                                <constraint firstItem="cjR-TH-YxP" firstAttribute="top" secondItem="se7-ZL-Ugb" secondAttribute="bottom" constant="8" id="ZED-kd-Mdq"/>
+                                                <constraint firstItem="rSv-Yj-HjG" firstAttribute="leading" secondItem="Gv4-FV-yms" secondAttribute="leading" id="bxu-CN-hqx"/>
+                                                <constraint firstItem="se7-ZL-Ugb" firstAttribute="top" secondItem="Gv4-FV-yms" secondAttribute="top" constant="8" id="gg6-2t-0iX"/>
+                                                <constraint firstItem="se7-ZL-Ugb" firstAttribute="centerY" secondItem="6f4-da-ywX" secondAttribute="centerY" id="iGN-pk-hD7"/>
+                                                <constraint firstItem="8ut-yf-7ki" firstAttribute="top" secondItem="cjR-TH-YxP" secondAttribute="bottom" constant="8" id="zwQ-i1-G5L"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemNameLabel" destination="cjR-TH-YxP" id="VK8-TL-OUs"/>
+                                            <outlet property="itemPriceLabel" destination="8ut-yf-7ki" id="Svs-V3-1h5"/>
+                                            <outlet property="itemTypeLabel" destination="Xtl-Vs-Oyl" id="0pZ-gX-f1m"/>
+                                            <outlet property="userImageView" destination="rSv-Yj-HjG" id="c5p-iK-4Ge"/>
+                                            <outlet property="userNameLabel" destination="se7-ZL-Ugb" id="7pz-bh-Jg5"/>
+                                            <outlet property="userTypeLabel" destination="6f4-da-ywX" id="QNK-ER-LVZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8Rq-cE-yfk" id="uxN-IZ-zni"/>
+                                    <outlet property="delegate" destination="8Rq-cE-yfk" id="ZfU-GR-4Av"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yXi-mb-mFE" secondAttribute="trailing" id="EU0-tt-ute"/>
+                            <constraint firstItem="VyJ-AO-qof" firstAttribute="top" secondItem="yXi-mb-mFE" secondAttribute="bottom" id="UzF-0t-ggh"/>
+                            <constraint firstItem="yXi-mb-mFE" firstAttribute="top" secondItem="8xG-Ug-uQI" secondAttribute="bottom" id="V7d-P4-UzT"/>
+                            <constraint firstItem="yXi-mb-mFE" firstAttribute="leading" secondItem="noI-aA-Azv" secondAttribute="leading" id="zih-24-Wb0"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="承認" id="k4h-jn-Urh"/>
+                    <tabBarItem key="tabBarItem" title="承認" image="approval" id="k4h-jn-Urh"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="yXi-mb-mFE" id="1MN-pM-naq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10d-8Y-fA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2399" y="-2911"/>
+            <point key="canvasLocation" x="-2983" y="-4200"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="PettyPayIcon" width="1200" height="1200"/>
+        <image name="approval" width="50" height="50"/>
+    </resources>
 </document>
