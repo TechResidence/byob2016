@@ -18,19 +18,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yXi-mb-mFE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yXi-mb-mFE">
                                 <rect key="frame" x="0.0" y="20" width="600" height="531"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="approvalTableViewCellID" id="I9i-z1-AXD" customClass="ApprovalTableViewCell" customModule="petty_pay" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="104"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9i-z1-AXD" id="Gv4-FV-yms">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="95"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rSv-Yj-HjG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="103" height="103"/>
+                                                    <rect key="frame" x="8" y="8" width="79" height="79"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="rSv-Yj-HjG" secondAttribute="height" multiplier="1:1" id="nCa-re-VUA"/>
                                                     </constraints>
@@ -70,14 +70,14 @@
                                                 <constraint firstItem="se7-ZL-Ugb" firstAttribute="leading" secondItem="6f4-da-ywX" secondAttribute="trailing" constant="8" id="3VA-p1-fgR"/>
                                                 <constraint firstItem="cjR-TH-YxP" firstAttribute="trailing" secondItem="se7-ZL-Ugb" secondAttribute="trailing" id="4rb-JO-y7S"/>
                                                 <constraint firstItem="cjR-TH-YxP" firstAttribute="centerY" secondItem="Xtl-Vs-Oyl" secondAttribute="centerY" id="5Ed-Mb-cNy"/>
-                                                <constraint firstItem="rSv-Yj-HjG" firstAttribute="top" secondItem="Gv4-FV-yms" secondAttribute="top" id="65X-GP-gIJ"/>
+                                                <constraint firstItem="rSv-Yj-HjG" firstAttribute="top" secondItem="Gv4-FV-yms" secondAttribute="top" constant="8" id="65X-GP-gIJ"/>
                                                 <constraint firstItem="Xtl-Vs-Oyl" firstAttribute="leading" secondItem="6f4-da-ywX" secondAttribute="leading" id="9MS-CU-ZSB"/>
                                                 <constraint firstItem="cjR-TH-YxP" firstAttribute="trailing" secondItem="8ut-yf-7ki" secondAttribute="trailing" id="GLy-Sq-gV0"/>
                                                 <constraint firstAttribute="trailing" secondItem="se7-ZL-Ugb" secondAttribute="trailing" constant="8" id="OWd-QK-lFT"/>
                                                 <constraint firstItem="cjR-TH-YxP" firstAttribute="trailing" secondItem="8ut-yf-7ki" secondAttribute="trailing" id="VV1-WY-qWc"/>
-                                                <constraint firstAttribute="bottom" secondItem="rSv-Yj-HjG" secondAttribute="bottom" id="Wt9-oC-9Sx"/>
+                                                <constraint firstAttribute="bottom" secondItem="rSv-Yj-HjG" secondAttribute="bottom" constant="8" id="Wt9-oC-9Sx"/>
                                                 <constraint firstItem="cjR-TH-YxP" firstAttribute="top" secondItem="se7-ZL-Ugb" secondAttribute="bottom" constant="8" id="ZED-kd-Mdq"/>
-                                                <constraint firstItem="rSv-Yj-HjG" firstAttribute="leading" secondItem="Gv4-FV-yms" secondAttribute="leading" id="bxu-CN-hqx"/>
+                                                <constraint firstItem="rSv-Yj-HjG" firstAttribute="leading" secondItem="Gv4-FV-yms" secondAttribute="leading" constant="8" id="bxu-CN-hqx"/>
                                                 <constraint firstItem="se7-ZL-Ugb" firstAttribute="top" secondItem="Gv4-FV-yms" secondAttribute="top" constant="8" id="gg6-2t-0iX"/>
                                                 <constraint firstItem="se7-ZL-Ugb" firstAttribute="centerY" secondItem="6f4-da-ywX" secondAttribute="centerY" id="iGN-pk-hD7"/>
                                                 <constraint firstItem="8ut-yf-7ki" firstAttribute="top" secondItem="cjR-TH-YxP" secondAttribute="bottom" constant="8" id="zwQ-i1-G5L"/>
