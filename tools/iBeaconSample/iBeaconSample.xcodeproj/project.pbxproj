@@ -15,6 +15,7 @@
 		478D810D1C93892000BD9801 /* iBeaconSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D810C1C93892000BD9801 /* iBeaconSampleTests.swift */; };
 		478D81181C93892100BD9801 /* iBeaconSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81171C93892100BD9801 /* iBeaconSampleUITests.swift */; };
 		478D81261C93F41800BD9801 /* WebAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81251C93F41800BD9801 /* WebAPIViewController.swift */; };
+		478D81281C942F7200BD9801 /* LogicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81271C942F7200BD9801 /* LogicHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		478D81171C93892100BD9801 /* iBeaconSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBeaconSampleUITests.swift; sourceTree = "<group>"; };
 		478D81191C93892100BD9801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478D81251C93F41800BD9801 /* WebAPIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIViewController.swift; sourceTree = "<group>"; };
+		478D81271C942F7200BD9801 /* LogicHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				478D81001C93892000BD9801 /* LaunchScreen.storyboard */,
 				478D81031C93892000BD9801 /* Info.plist */,
 				478D81251C93F41800BD9801 /* WebAPIViewController.swift */,
+				478D81271C942F7200BD9801 /* LogicHelper.swift */,
 			);
 			path = iBeaconSample;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				478D81261C93F41800BD9801 /* WebAPIViewController.swift in Sources */,
 				478D80FA1C93892000BD9801 /* ViewController.swift in Sources */,
+				478D81281C942F7200BD9801 /* LogicHelper.swift in Sources */,
 				478D80F81C93892000BD9801 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +493,7 @@
 				478D811E1C93892100BD9801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478D811F1C93892100BD9801 /* Build configuration list for PBXNativeTarget "iBeaconSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +502,7 @@
 				478D81211C93892100BD9801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		478D81221C93892100BD9801 /* Build configuration list for PBXNativeTarget "iBeaconSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +511,7 @@
 				478D81241C93892100BD9801 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,13 +16,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let ud = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var myUserTextView: UITextView!
     @IBOutlet weak var MyAccount: UITextView!
+    @IBOutlet weak var transferTextView: UITextView!
     
     let colors:[UIColor] = [
         UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
         UIColor(red: 142/255, green: 212/255, blue: 220/255, alpha: 1),
         UIColor(red: 162/255, green: 213/255, blue: 181/255, alpha: 1)
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self;
@@ -31,19 +32,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         locationManager.startRangingBeaconsInRegion(region)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func fetchAccountDetail(sender: AnyObject) {
-        
+    func getHttpRequest(url:String, completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void)->Void{
         let token = ud.objectForKey("token") as! String
         
         // create the url-request
-        let urlString = "http://demo-ap08-prod.apigee.net/v1/accounts/3457406176"
-        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         
         // set the method(HTTP-GET)
         request.HTTPMethod = "GET"
@@ -54,7 +53,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         request.addValue(auth, forHTTPHeaderField: "Authorization")
         
         let session: NSURLSession = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
+        task.resume()
+    }
+    
+    @IBAction func fetchAccountDetail(sender: AnyObject) {
         
+        let urlString = "http://demo-ap08-prod.apigee.net/v1/accounts/3457406176"
         
         let completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void = { data, response, error in
             if (error == nil) {
@@ -83,53 +88,45 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print(error)
             }
         }
-        
-        // use NSURLSessionDataTask
-        let task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
-        task.resume()
-
+        self.getHttpRequest(urlString, completionHandler: completionHandler)
     }
     
     
+    @IBAction func transfer(sender: AnyObject) {
+        self.transferTextView.text = ""
+        
+    }
     @IBAction func pushButton(sender: AnyObject) {
-        
-        let token = ud.objectForKey("token") as! String
-        
-        // create the url-request
         let urlString = "http://demo-ap08-prod.apigee.net/v1/users/me"
-        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
         
-        // set the method(HTTP-GET)
-        request.HTTPMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        let logic:Dictionary<String, AnyObject> -> Void = { user in
+            let userId = user["user_id"] as! String
+            let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
+            let accountId = accounts[0]["account_id"] as! String
+            
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.myUserTextView.text = ""
+                self.myUserTextView.text = self.myUserTextView.text + "\n " + "user id: " + userId
+                
+                self.myUserTextView.text = self.myUserTextView.text + "\n " + "account id: " + accountId
+            }
+        }
         
-        let auth = "Bearer " + token
-        print(auth)
-        request.addValue(auth, forHTTPHeaderField: "Authorization")
+        let completionHandler = createCompletionHandler(logic)
         
-        let session: NSURLSession = NSURLSession.sharedSession()
-        
+        self.getHttpRequest(urlString, completionHandler: completionHandler)
+    }
+    
+    
+    func createCompletionHandler(logic: Dictionary<String, AnyObject> -> Void)-> (NSData?, NSURLResponse?, NSError?)-> Void{
         let completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void = { data, response, error in
             if (error == nil) {
                 let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
                 print(result)
                 do {
-                    let user = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as! Dictionary<String, AnyObject>
-                    let userId = user["user_id"] as! String
-                    let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
-                    let accountId = accounts[0]["account_id"] as! String
-                    
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        self.myUserTextView.text = ""
-                        self.myUserTextView.text = self.myUserTextView.text + "\n " + "user id: " + userId
-                        
-                        self.myUserTextView.text = self.myUserTextView.text + "\n " + "account id: " + accountId
-                    }
-                    
-                    //
-//                    let headers = json["headers"] as! Dictionary<String, AnyObject>
-//                    print(headers["Accept"])
+                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as! Dictionary<String, AnyObject>
+                    logic(json)
                 } catch {
                     print(error)
                 }
@@ -138,14 +135,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 print(error)
             }
         }
-        
-        // use NSURLSessionDataTask
-        let task = session.dataTaskWithRequest(request, completionHandler: completionHandler)
-        task.resume()
-    }
-    
-    func fetchMyUser(){
-        
+        return completionHandler
     }
     
     
@@ -173,7 +163,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
-
-
+    
+    
 }
 
