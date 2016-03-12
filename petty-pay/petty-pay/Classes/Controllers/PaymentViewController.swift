@@ -47,6 +47,12 @@ class PaymentViewController: UIViewController {
 			print(m)
 			print("Go to Ryoshu-sho page")
 			motionManager.stopAccelerometerUpdates()
+			
+			let mainStoryboard: UIStoryboard = UIStoryboard(name: "Payment", bundle: nil)
+	        let receiptViewController = mainStoryboard.instantiateViewControllerWithIdentifier("receiptViewControllerID")
+    	    self.presentViewController(receiptViewController, animated: true) { () -> Void in
+        	    print("Show receiptViewController")
+        	}
 		}
 	}
 
