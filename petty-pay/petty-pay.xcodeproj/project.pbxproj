@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D2CFAC91C93D29C00073B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFAC71C93D29C00073B5D /* Main.storyboard */; };
+		7D2CFACB1C93D29C00073B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFACA1C93D29C00073B5D /* Assets.xcassets */; };
+		7D2CFACE1C93D29C00073B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFACC1C93D29C00073B5D /* LaunchScreen.storyboard */; };
+		7D2CFAD91C93D29C00073B5D /* petty_payTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAD81C93D29C00073B5D /* petty_payTests.swift */; };
+		7D2CFAF01C93EC7100073B5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAEF1C93EC7100073B5D /* AppDelegate.swift */; };
+		7D2CFAF21C93FF7700073B5D /* ManagementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAF11C93FF7700073B5D /* ManagementViewController.swift */; };
+		7D2CFAF41C93FF9300073B5D /* ApprovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAF31C93FF9300073B5D /* ApprovalViewController.swift */; };
+		7D2CFAF61C93FFB600073B5D /* ChargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAF51C93FFB600073B5D /* ChargeViewController.swift */; };
+		7D2CFAF81C93FFCB00073B5D /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAF71C93FFCB00073B5D /* PaymentViewController.swift */; };
+		7D2CFAFA1C93FFD800073B5D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAF91C93FFD800073B5D /* ShopViewController.swift */; };
+		7D2CFAFC1C94007F00073B5D /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAFB1C94007F00073B5D /* MainTabViewController.swift */; };
+		7D2CFAFF1C94090E00073B5D /* Management.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFAFD1C94090E00073B5D /* Management.storyboard */; };
+		7D2CFB021C94095000073B5D /* Approval.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB001C94095000073B5D /* Approval.storyboard */; };
+		7D2CFB051C94096800073B5D /* Charge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB031C94096800073B5D /* Charge.storyboard */; };
+		7D2CFB081C94097D00073B5D /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB061C94097D00073B5D /* Payment.storyboard */; };
+		7D2CFB0B1C94099500073B5D /* Shop.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFB091C94099500073B5D /* Shop.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7D2CFAD51C93D29C00073B5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7D2CFAB81C93D29C00073B5D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7D2CFABF1C93D29C00073B5D;
+			remoteInfo = "petty-pay";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7D2CFAC01C93D29C00073B5D /* petty-pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "petty-pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2CFAC81C93D29C00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7D2CFACA1C93D29C00073B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7D2CFACD1C93D29C00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7D2CFAD41C93D29C00073B5D /* petty-payTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "petty-payTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2CFAD81C93D29C00073B5D /* petty_payTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = petty_payTests.swift; sourceTree = "<group>"; };
+		7D2CFADA1C93D29C00073B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2CFAE81C93EC1F00073B5D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D2CFAEF1C93EC7100073B5D /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
+		7D2CFAF11C93FF7700073B5D /* ManagementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagementViewController.swift; sourceTree = "<group>"; };
+		7D2CFAF31C93FF9300073B5D /* ApprovalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalViewController.swift; sourceTree = "<group>"; };
+		7D2CFAF51C93FFB600073B5D /* ChargeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargeViewController.swift; sourceTree = "<group>"; };
+		7D2CFAF71C93FFCB00073B5D /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		7D2CFAF91C93FFD800073B5D /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		7D2CFAFB1C94007F00073B5D /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		7D2CFAFE1C94090E00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Management.storyboard; sourceTree = "<group>"; };
+		7D2CFB011C94095000073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Approval.storyboard; sourceTree = "<group>"; };
+		7D2CFB041C94096800073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Charge.storyboard; sourceTree = "<group>"; };
+		7D2CFB071C94097D00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Payment.storyboard; sourceTree = "<group>"; };
+		7D2CFB0A1C94099500073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Shop.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D2CFABD1C93D29C00073B5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2CFAD11C93D29C00073B5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D2CFAB71C93D29C00073B5D = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAC21C93D29C00073B5D /* petty-pay */,
+				7D2CFAD71C93D29C00073B5D /* petty-payTests */,
+				7D2CFAC11C93D29C00073B5D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7D2CFAC11C93D29C00073B5D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAC01C93D29C00073B5D /* petty-pay.app */,
+				7D2CFAD41C93D29C00073B5D /* petty-payTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D2CFAC21C93D29C00073B5D /* petty-pay */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFB0C1C940A6500073B5D /* Storyboards */,
+				7D2CFAE71C93EC1F00073B5D /* Supporting Files */,
+				7D2CFAE31C93E42F00073B5D /* Classes */,
+				7D2CFACA1C93D29C00073B5D /* Assets.xcassets */,
+			);
+			path = "petty-pay";
+			sourceTree = "<group>";
+		};
+		7D2CFAD71C93D29C00073B5D /* petty-payTests */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAD81C93D29C00073B5D /* petty_payTests.swift */,
+				7D2CFADA1C93D29C00073B5D /* Info.plist */,
+			);
+			path = "petty-payTests";
+			sourceTree = "<group>";
+		};
+		7D2CFAE31C93E42F00073B5D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAEF1C93EC7100073B5D /* AppDelegate.swift */,
+				7D2CFAEA1C93EC3700073B5D /* Controllers */,
+				7D2CFAEC1C93EC3700073B5D /* Models */,
+				7D2CFAED1C93EC3700073B5D /* Views */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		7D2CFAE71C93EC1F00073B5D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAE81C93EC1F00073B5D /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D2CFAEA1C93EC3700073B5D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAF11C93FF7700073B5D /* ManagementViewController.swift */,
+				7D2CFAF31C93FF9300073B5D /* ApprovalViewController.swift */,
+				7D2CFAF51C93FFB600073B5D /* ChargeViewController.swift */,
+				7D2CFAF71C93FFCB00073B5D /* PaymentViewController.swift */,
+				7D2CFAF91C93FFD800073B5D /* ShopViewController.swift */,
+				7D2CFAFB1C94007F00073B5D /* MainTabViewController.swift */,
+			);
+			name = Controllers;
+			path = Classes/Controllers;
+			sourceTree = "<group>";
+		};
+		7D2CFAEC1C93EC3700073B5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			path = Classes/Models;
+			sourceTree = "<group>";
+		};
+		7D2CFAED1C93EC3700073B5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			path = Classes/Views;
+			sourceTree = "<group>";
+		};
+		7D2CFB0C1C940A6500073B5D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAC71C93D29C00073B5D /* Main.storyboard */,
+				7D2CFB091C94099500073B5D /* Shop.storyboard */,
+				7D2CFB061C94097D00073B5D /* Payment.storyboard */,
+				7D2CFB031C94096800073B5D /* Charge.storyboard */,
+				7D2CFB001C94095000073B5D /* Approval.storyboard */,
+				7D2CFAFD1C94090E00073B5D /* Management.storyboard */,
+				7D2CFACC1C93D29C00073B5D /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D2CFABF1C93D29C00073B5D /* petty-pay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D2CFADD1C93D29C00073B5D /* Build configuration list for PBXNativeTarget "petty-pay" */;
+			buildPhases = (
+				7D2CFABC1C93D29C00073B5D /* Sources */,
+				7D2CFABD1C93D29C00073B5D /* Frameworks */,
+				7D2CFABE1C93D29C00073B5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "petty-pay";
+			productName = "petty-pay";
+			productReference = 7D2CFAC01C93D29C00073B5D /* petty-pay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7D2CFAD31C93D29C00073B5D /* petty-payTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D2CFAE01C93D29C00073B5D /* Build configuration list for PBXNativeTarget "petty-payTests" */;
+			buildPhases = (
+				7D2CFAD01C93D29C00073B5D /* Sources */,
+				7D2CFAD11C93D29C00073B5D /* Frameworks */,
+				7D2CFAD21C93D29C00073B5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D2CFAD61C93D29C00073B5D /* PBXTargetDependency */,
+			);
+			name = "petty-payTests";
+			productName = "petty-payTests";
+			productReference = 7D2CFAD41C93D29C00073B5D /* petty-payTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D2CFAB81C93D29C00073B5D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Petty Pay Team";
+				TargetAttributes = {
+					7D2CFABF1C93D29C00073B5D = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					7D2CFAD31C93D29C00073B5D = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 7D2CFABF1C93D29C00073B5D;
+					};
+				};
+			};
+			buildConfigurationList = 7D2CFABB1C93D29C00073B5D /* Build configuration list for PBXProject "petty-pay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7D2CFAB71C93D29C00073B5D;
+			productRefGroup = 7D2CFAC11C93D29C00073B5D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D2CFABF1C93D29C00073B5D /* petty-pay */,
+				7D2CFAD31C93D29C00073B5D /* petty-payTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D2CFABE1C93D29C00073B5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2CFB0B1C94099500073B5D /* Shop.storyboard in Resources */,
+				7D2CFACE1C93D29C00073B5D /* LaunchScreen.storyboard in Resources */,
+				7D2CFB081C94097D00073B5D /* Payment.storyboard in Resources */,
+				7D2CFAFF1C94090E00073B5D /* Management.storyboard in Resources */,
+				7D2CFACB1C93D29C00073B5D /* Assets.xcassets in Resources */,
+				7D2CFB021C94095000073B5D /* Approval.storyboard in Resources */,
+				7D2CFB051C94096800073B5D /* Charge.storyboard in Resources */,
+				7D2CFAC91C93D29C00073B5D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2CFAD21C93D29C00073B5D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D2CFABC1C93D29C00073B5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2CFAF01C93EC7100073B5D /* AppDelegate.swift in Sources */,
+				7D2CFAFC1C94007F00073B5D /* MainTabViewController.swift in Sources */,
+				7D2CFAF81C93FFCB00073B5D /* PaymentViewController.swift in Sources */,
+				7D2CFAF61C93FFB600073B5D /* ChargeViewController.swift in Sources */,
+				7D2CFAF21C93FF7700073B5D /* ManagementViewController.swift in Sources */,
+				7D2CFAFA1C93FFD800073B5D /* ShopViewController.swift in Sources */,
+				7D2CFAF41C93FF9300073B5D /* ApprovalViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D2CFAD01C93D29C00073B5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D2CFAD91C93D29C00073B5D /* petty_payTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D2CFAD61C93D29C00073B5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7D2CFABF1C93D29C00073B5D /* petty-pay */;
+			targetProxy = 7D2CFAD51C93D29C00073B5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D2CFAC71C93D29C00073B5D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFAC81C93D29C00073B5D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7D2CFACC1C93D29C00073B5D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFACD1C93D29C00073B5D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7D2CFAFD1C94090E00073B5D /* Management.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFAFE1C94090E00073B5D /* Base */,
+			);
+			name = Management.storyboard;
+			sourceTree = "<group>";
+		};
+		7D2CFB001C94095000073B5D /* Approval.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFB011C94095000073B5D /* Base */,
+			);
+			name = Approval.storyboard;
+			sourceTree = "<group>";
+		};
+		7D2CFB031C94096800073B5D /* Charge.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFB041C94096800073B5D /* Base */,
+			);
+			name = Charge.storyboard;
+			sourceTree = "<group>";
+		};
+		7D2CFB061C94097D00073B5D /* Payment.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFB071C94097D00073B5D /* Base */,
+			);
+			name = Payment.storyboard;
+			sourceTree = "<group>";
+		};
+		7D2CFB091C94099500073B5D /* Shop.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D2CFB0A1C94099500073B5D /* Base */,
+			);
+			name = Shop.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D2CFADB1C93D29C00073B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7D2CFADC1C93D29C00073B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D2CFADE1C93D29C00073B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "petty-pay/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.petty-pay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7D2CFADF1C93D29C00073B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "petty-pay/Supporting Files/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.petty-pay";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7D2CFAE11C93D29C00073B5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "petty-payTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.petty-payTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/petty-pay.app/petty-pay";
+			};
+			name = Debug;
+		};
+		7D2CFAE21C93D29C00073B5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "petty-payTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.petty-payTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/petty-pay.app/petty-pay";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D2CFABB1C93D29C00073B5D /* Build configuration list for PBXProject "petty-pay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2CFADB1C93D29C00073B5D /* Debug */,
+				7D2CFADC1C93D29C00073B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D2CFADD1C93D29C00073B5D /* Build configuration list for PBXNativeTarget "petty-pay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2CFADE1C93D29C00073B5D /* Debug */,
+				7D2CFADF1C93D29C00073B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D2CFAE01C93D29C00073B5D /* Build configuration list for PBXNativeTarget "petty-payTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D2CFAE11C93D29C00073B5D /* Debug */,
+				7D2CFAE21C93D29C00073B5D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D2CFAB81C93D29C00073B5D /* Project object */;
+}
