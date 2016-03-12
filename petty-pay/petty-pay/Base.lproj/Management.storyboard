@@ -96,6 +96,13 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1y-TJ-Wc4">
+                                <rect key="frame" x="285" y="490" width="45" height="43"/>
+                                <state key="normal" title="Button" image="plus"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JY1-aV-4Q0">
+                                <rect key="frame" x="18" y="83" width="54" height="59"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -122,12 +129,10 @@
         <image name="1" width="212" height="219"/>
         <image name="2" width="212" height="219"/>
         <image name="3" width="197" height="195"/>
-        <image name="PettyPayIcon" width="1200" height="1200"/>
         <image name="bk_small-1" width="110" height="29"/>
         <image name="box" width="341" height="99"/>
         <image name="en01" width="240" height="240"/>
         <image name="graph_menu" width="248" height="294"/>
         <image name="manage" width="30" height="30"/>
-        <image name="plus" width="69" height="68"/>
     </resources>
 </document>
