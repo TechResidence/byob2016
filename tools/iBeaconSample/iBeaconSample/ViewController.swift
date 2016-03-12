@@ -9,28 +9,15 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
-    let locationManager = CLLocationManager()
-    let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "Estimotes")
+class ViewController: UIViewController {
     
     let ud = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var myUserTextView: UITextView!
     @IBOutlet weak var MyAccount: UITextView!
     @IBOutlet weak var transferTextView: UITextView!
     
-    let colors:[UIColor] = [
-        UIColor(red: 84/255, green: 77/255, blue: 160/255, alpha: 1),
-        UIColor(red: 142/255, green: 212/255, blue: 220/255, alpha: 1),
-        UIColor(red: 162/255, green: 213/255, blue: 181/255, alpha: 1)
-    ]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager.delegate = self;
-        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedAlways) {
-            locationManager.requestAlwaysAuthorization()
-        }
-        locationManager.startRangingBeaconsInRegion(region)
     }
     
     override func didReceiveMemoryWarning() {
@@ -191,33 +178,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         return completionHandler
     }
-    
-    
-    
-    //領域に入った時
-    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        print("enter")
-        sendLocalNotificationWithMessage("領域に入りました")
-    }
-    
-    func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        print(beacons)
-        let knownBeacons = beacons.filter{ $0.proximity != CLProximity.Unknown }
-        
-        if (knownBeacons.count > 0) {
-            let closestBeacon = knownBeacons[0] as CLBeacon
-            print(closestBeacon.minor.integerValue)
-            self.view.backgroundColor = self.colors[closestBeacon.minor.integerValue]
-        }
-    }
-    
-    func sendLocalNotificationWithMessage(message: String!) {
-        let notification:UILocalNotification = UILocalNotification()
-        notification.alertBody = message
-        
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
-    }
-    
     
 }
 
