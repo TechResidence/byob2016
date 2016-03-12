@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429137C19D97A4F0025188A /* MyMenuTableViewController.swift */; };
 		1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1429139219DA9F4D0025188A /* MyNavigationController.swift */; };
-		14EAB63D19DD4E95006A90FC /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EAB63B19DD4E95006A90FC /* ENSideMenu.swift */; };
-		14EAB63E19DD4E95006A90FC /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EAB63C19DD4E95006A90FC /* ENSideMenuNavigationController.swift */; };
 		25BEA43E0DE72D5FC0CE5254 /* Pods_SwiftSideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C66AEF6689E941D244D576E /* Pods_SwiftSideMenu.framework */; };
 		529179831C6F96B400FB4C96 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529179821C6F96B400FB4C96 /* SignIn.swift */; };
 		529179851C6F96D800FB4C96 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529179841C6F96D800FB4C96 /* SignUp.swift */; };
@@ -36,6 +34,8 @@
 		5C13259C198E2A9A00CA49BE /* SwiftSideMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13259B198E2A9A00CA49BE /* SwiftSideMenuTests.swift */; };
 		5C6D6A271A7E26380047FE0D /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6D6A261A7E26380047FE0D /* ViewController2.swift */; };
 		5C7D78C21BAEEEC2002BD24B /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C7D78C11BAEEEC2002BD24B /* LaunchView.xib */; };
+		7D2CFAB51C93C09C00073B5D /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAB31C93C09C00073B5D /* ENSideMenu.swift */; };
+		7D2CFAB61C93C09C00073B5D /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFAB41C93C09C00073B5D /* ENSideMenuNavigationController.swift */; };
 		9E4766FC19DDBCE900FCEACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C13258C198E2A9A00CA49BE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -52,8 +52,6 @@
 /* Begin PBXFileReference section */
 		1429137C19D97A4F0025188A /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
 		1429139219DA9F4D0025188A /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
-		14EAB63B19DD4E95006A90FC /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
-		14EAB63C19DD4E95006A90FC /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		529179821C6F96B400FB4C96 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		529179841C6F96D800FB4C96 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		529179881C6FA74D00FB4C96 /* ViewResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewResult.swift; sourceTree = "<group>"; };
@@ -87,6 +85,8 @@
 		5C6D6A261A7E26380047FE0D /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		5C7D78C11BAEEEC2002BD24B /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		6C66AEF6689E941D244D576E /* Pods_SwiftSideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftSideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D2CFAB31C93C09C00073B5D /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		7D2CFAB41C93C09C00073B5D /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
 		F9955513607B4C9DC9793AB9 /* Pods-SwiftSideMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftSideMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftSideMenu/Pods-SwiftSideMenu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,16 +138,6 @@
 				52E99D591C7C28E100CF2110 /* CheckAPIViewController.swift */,
 			);
 			name = Controllers;
-			sourceTree = "<group>";
-		};
-		14EAB63A19DD4E95006A90FC /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				14EAB63B19DD4E95006A90FC /* ENSideMenu.swift */,
-				14EAB63C19DD4E95006A90FC /* ENSideMenuNavigationController.swift */,
-			);
-			name = Library;
-			path = ../../Library;
 			sourceTree = "<group>";
 		};
 		52917A121C71D97C00FB4C96 /* Models */ = {
@@ -203,8 +193,8 @@
 		5C132585198E2A9A00CA49BE /* SwiftSideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				7D2CFAB21C93C09C00073B5D /* Library */,
 				52E99D5B1C8185BC00CF2110 /* csv */,
-				14EAB63A19DD4E95006A90FC /* Library */,
 				1429137B19D979A50025188A /* Storyboard Example */,
 				5C13258C198E2A9A00CA49BE /* Main.storyboard */,
 				52CB524E1C91C21900C13A45 /* DoneViewController.swift */,
@@ -239,6 +229,15 @@
 				5C13259A198E2A9A00CA49BE /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D2CFAB21C93C09C00073B5D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7D2CFAB31C93C09C00073B5D /* ENSideMenu.swift */,
+				7D2CFAB41C93C09C00073B5D /* ENSideMenuNavigationController.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		934F9CB01E7AB0EF5017056D /* Frameworks */ = {
@@ -429,16 +428,16 @@
 				52E99B8B1C7A2D1000CF2110 /* ViewController.m in Sources */,
 				52917A1B1C71DD6C00FB4C96 /* CircleImageView.swift in Sources */,
 				52917A111C718D3900FB4C96 /* VoteViewController.swift in Sources */,
-				14EAB63E19DD4E95006A90FC /* ENSideMenuNavigationController.swift in Sources */,
 				52917A171C71DA8300FB4C96 /* ChooseItemView.swift in Sources */,
 				5C13258B198E2A9A00CA49BE /* ViewController.swift in Sources */,
 				1429137D19D97A4F0025188A /* MyMenuTableViewController.swift in Sources */,
-				14EAB63D19DD4E95006A90FC /* ENSideMenu.swift in Sources */,
 				5C6D6A271A7E26380047FE0D /* ViewController2.swift in Sources */,
 				52E99D5A1C7C28E100CF2110 /* CheckAPIViewController.swift in Sources */,
+				7D2CFAB61C93C09C00073B5D /* ENSideMenuNavigationController.swift in Sources */,
 				1429139319DA9F4D0025188A /* MyNavigationController.swift in Sources */,
 				52917A141C71D9B100FB4C96 /* Item.swift in Sources */,
 				52E99B871C7A24BE00CF2110 /* GraphViewController.m in Sources */,
+				7D2CFAB51C93C09C00073B5D /* ENSideMenu.swift in Sources */,
 				52917A191C71DC7400FB4C96 /* ImagelabelView.swift in Sources */,
 				5C132589198E2A9A00CA49BE /* AppDelegate.swift in Sources */,
 				529179851C6F96D800FB4C96 /* SignUp.swift in Sources */,
