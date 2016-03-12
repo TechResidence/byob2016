@@ -14,16 +14,16 @@ class ApprovalViewController: UIViewController, UITableViewDelegate, UITableView
     
     let defaultPurchases: [Purchase] = [
         Purchase(
-            user: User(name: "小口元気", type: "営業", image: UIImage(named: "PettyPayIcon")!),
+            user: User(name: "小口元気", type: "営業", image: UIImage(named: "prof01")!),
             item: Item(name: "接待費", type: "購入", price: 3000)
         ),
         Purchase(
-            user: User(name: "小口元気2", type: "営業", image: UIImage(named: "PettyPayIcon")!),
-            item: Item(name: "接待費", type: "購入", price: 3000)
+            user: User(name: "花田蜜子", type: "秘書", image: UIImage(named: "prof03")!),
+            item: Item(name: "お菓子", type: "購入", price: 1000)
         ),
         Purchase(
-            user: User(name: "小口元気3", type: "営業", image: UIImage(named: "PettyPayIcon")!),
-            item: Item(name: "接待費", type: "購入", price: 3000)
+            user: User(name: "中村太郎", type: "R&D", image: UIImage(named: "prof02")!),
+            item: Item(name: "参考書", type: "R&D", price: 3000)
         )
     ]
     

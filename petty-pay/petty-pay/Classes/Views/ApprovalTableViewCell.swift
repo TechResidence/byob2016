@@ -30,12 +30,12 @@ class ApprovalTableViewCell: UITableViewCell {
     
     func construct(purchase: Purchase) {
         userImageView.image = purchase.user.image
-        userNameLabel!.text = purchase.user.name
-        userImageView.image = purchase.user.image
+        userTypeLabel.text = purchase.user.type + ": "
         userNameLabel.text = purchase.user.name
-        userTypeLabel.text = purchase.user.type
+        
+        itemTypeLabel.text = purchase.item.type + ": "
         itemNameLabel.text = purchase.item.name
-        itemPriceLabel.text = String(purchase.item.price)
+        itemPriceLabel.text = String(purchase.item.price) + "円"
     }
     
 }
