@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Charge-->
@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="-1510.5" y="-2409.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Charging View Controller-->
         <scene sceneID="ka3-Np-ZQQ">
             <objects>
-                <viewController id="jJf-EL-Wzz" sceneMemberID="viewController">
+                <viewController id="jJf-EL-Wzz" customClass="ChargingViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F3A-Ov-agc"/>
                         <viewControllerLayoutGuide type="bottom" id="15W-1w-i1h"/>
@@ -133,7 +133,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgx-PC-EMl">
                                 <rect key="frame" x="78" y="174" width="216" height="166"/>
                                 <connections>
-                                    <segue destination="cGJ-0d-qPT" kind="show" id="Tfe-aY-ICv"/>
+                                    <action selector="alerting:" destination="jJf-EL-Wzz" eventType="touchUpInside" id="JbN-eH-i9p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,36 +145,11 @@
             </objects>
             <point key="canvasLocation" x="-1054.5" y="-2409.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3RM-JT-pRP">
-            <objects>
-                <viewController id="cGJ-0d-qPT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gp6-2w-Mdc"/>
-                        <viewControllerLayoutGuide type="bottom" id="FbE-v1-BAi"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9px-uR-aET">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pay3" translatesAutoresizingMaskIntoConstraints="NO" id="J08-FN-LvL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SoK-lg-qnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-602.5" y="-2409.5"/>
-        </scene>
     </scenes>
     <resources>
         <image name="bk" width="375" height="667"/>
         <image name="bk_small-1" width="110" height="29"/>
         <image name="charge" width="30" height="30"/>
-        <image name="pay3" width="750" height="1334"/>
         <image name="qr" width="990" height="280"/>
         <image name="yes_off" width="438" height="208"/>
         <image name="yes_on" width="438" height="202"/>
