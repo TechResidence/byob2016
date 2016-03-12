@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281ABD391C949BE400107061 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281ABD381C949BE400107061 /* ReceiptViewController.swift */; };
 		478D812A1C9485C600BD9801 /* MufgApiLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81291C9485C600BD9801 /* MufgApiLogic.swift */; };
 		7D2CFAC91C93D29C00073B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFAC71C93D29C00073B5D /* Main.storyboard */; };
 		7D2CFACB1C93D29C00073B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFACA1C93D29C00073B5D /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		281ABD381C949BE400107061 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		478D81291C9485C600BD9801 /* MufgApiLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MufgApiLogic.swift; path = Classes/Managers/MufgApiLogic.swift; sourceTree = "<group>"; };
 		7D2CFAC01C93D29C00073B5D /* petty-pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "petty-pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2CFAC81C93D29C00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				7D2CFAFB1C94007F00073B5D /* MainTabViewController.swift */,
 				7D953F571C946835009403A2 /* LoginViewController.swift */,
 				7D953F591C946B56009403A2 /* WebAPIViewController.swift */,
+				281ABD381C949BE400107061 /* ReceiptViewController.swift */,
 			);
 			name = Controllers;
 			path = Classes/Controllers;
@@ -326,6 +329,7 @@
 				7D953F581C946835009403A2 /* LoginViewController.swift in Sources */,
 				7D2CFAF01C93EC7100073B5D /* AppDelegate.swift in Sources */,
 				7D2CFB101C94323400073B5D /* Item.swift in Sources */,
+				281ABD391C949BE400107061 /* ReceiptViewController.swift in Sources */,
 				7D2CFAFC1C94007F00073B5D /* MainTabViewController.swift in Sources */,
 				7D2CFAF81C93FFCB00073B5D /* PaymentViewController.swift in Sources */,
 				7D2CFAF61C93FFB600073B5D /* ChargeViewController.swift in Sources */,
