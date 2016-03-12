@@ -9,7 +9,12 @@
 import UIKit
 
 class ManagementViewController: UIViewController {
+    
+    let logic = MufgApiLogic()
 
+    @IBOutlet weak var amountLabel: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +26,30 @@ class ManagementViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+//        let logic:Dictionary<String, AnyObject> -> Void = { user in
+//            print(user)
+//            let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
+//            let accountId = accounts[0]["account_id"] as! String
+//            let userName = user["user_name"] as! String
+//            
+//            let logic_:Dictionary<String, AnyObject> -> Void = {account in
+//                let balance = account["balance"] as! Int
+//                
+//                dispatch_async(dispatch_get_main_queue()) {
+//                    self.amountLabel.text = "¥" + String(balance)
+//                    self.userLabel.text = userName
+//                    self.dateLabel.text = "2016/03/12"
+//                }
+//            }
+//            self.logic.fetchAccountDetail(accountId, callback: logic_)
+//        }
+//        
+//        self.logic.fetchMe(logic)
+    }
 
     /*
     // MARK: - Navigation
