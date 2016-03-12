@@ -9,18 +9,23 @@
 import UIKit
 
 class ChargeViewController: UIViewController {
-
+    
+    @IBOutlet weak var itemNameTextField: UITextField!
+    @IBOutlet weak var numberOfItemsTextField: UITextField!
+    @IBOutlet weak var priceTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let recognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(recognizer)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func dismissKeyboard() {
+        itemNameTextField.resignFirstResponder()
+        numberOfItemsTextField.resignFirstResponder()
+        priceTextField.resignFirstResponder()
     }
-
+    
     @IBAction func charge(sender: UIButton) {
         print("charge!")
         if !PeripheralManager.isAdvertising() {
@@ -28,5 +33,5 @@ class ChargeViewController: UIViewController {
             PeripheralManager.startAdvertising()
         }
     }
-
+    
 }
