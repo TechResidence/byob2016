@@ -40,10 +40,10 @@ class PaymentViewController: UIViewController {
     func doTransferAPI() {
         let mufgApiLogic = MufgApiLogic()
         
-        let logic:Dictionary<String, AnyObject> -> Void = {result in
+        let logic:NSData -> Void = {result in
             print("transfer done!")
             
-            let logic_:Dictionary<String, AnyObject> -> Void = {result2 in
+            let logic_:NSData -> Void = {result2 in
                 print("approval done!")
             }
             mufgApiLogic.sendApproveRequest("3453746760", callback: logic_)

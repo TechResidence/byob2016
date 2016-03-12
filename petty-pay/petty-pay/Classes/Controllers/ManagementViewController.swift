@@ -30,16 +30,18 @@ class ManagementViewController: UIViewController {
         super.viewWillAppear(animated)
         
         
-        let logic:Dictionary<String, AnyObject> -> Void = { user in
+        let logic:NSData -> Void = { user_ in
+            let user = self.logic.jsonToDict(user_)!
             let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
             let accountId = accounts[0]["account_id"] as! String
             let userName = user["user_name"] as! String
             
-            let logic_:Dictionary<String, AnyObject> -> Void = {account in
+            let logic_:NSData -> Void = {account_ in
+                let account = self.logic.jsonToDict(account_)!
                 let balance = account["balance"] as! Int
                 
                 dispatch_async(dispatch_get_main_queue()) {
-                    self.amountLabel.text = "¥" + String(balance)
+                    self.amountLabel.text = self.format(balance)
                     self.userLabel.text = userName
                     self.dateLabel.text = "2016/03/12"
                 }
@@ -49,21 +51,18 @@ class ManagementViewController: UIViewController {
         
         self.logic.fetchMe(logic)
         
-        doTransferAPI()
+//        doTransferAPI()
     }
     
-    func doTransferAPI() {
-        let mufgApiLogic = MufgApiLogic()
+    func format(i:Int)-> String{
+        let num = NSNumber(integer: i)
         
-        let logic:Dictionary<String, AnyObject> -> Void = {result in
-            print("transfer done!")
-            
-            let logic_:Dictionary<String, AnyObject> -> Void = {result2 in
-                print("approval done!")
-            }
-            mufgApiLogic.sendApproveRequest("3453746760", callback: logic_)
-        }
-        mufgApiLogic.sendTransferRequest("3453746760", toAccountId: "3450500775", amount: 1000, callback: logic)
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        formatter.groupingSeparator = ","
+        formatter.groupingSize = 3
+        
+        return "¥" + formatter.stringFromNumber(num)!
     }
 
     /*

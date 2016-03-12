@@ -12,7 +12,7 @@ class MufgApiLogic: NSObject {
     
     let ud = NSUserDefaults.standardUserDefaults()
     
-    func sendApproveRequest(accountId: String, callback: Dictionary<String, AnyObject> -> Void){
+    func sendApproveRequest(accountId: String, callback: NSData -> Void){
         
         let urlString = "http://demo-ap08-prod.apigee.net/v1/accounts/" + accountId + "/transfers?action=approve"
         let completionHandler = self.createCompletionHandler(callback)
@@ -28,7 +28,7 @@ class MufgApiLogic: NSObject {
         }
     }
     
-    func sendTransferRequest(fromAccountId: String, toAccountId: String, amount:Int, callback: Dictionary<String, AnyObject> -> Void){
+    func sendTransferRequest(fromAccountId: String, toAccountId: String, amount:Int, callback: NSData -> Void){
         
         let urlString = "http://demo-ap08-prod.apigee.net/v1/accounts/" + fromAccountId + "/transfers"
         let completionHandler = self.createCompletionHandler(callback)
@@ -64,13 +64,13 @@ class MufgApiLogic: NSObject {
         task.resume()
     }
     
-    func fetchAccountDetail(accountId: String, callback: Dictionary<String, AnyObject> -> Void){
+    func fetchAccountDetail(accountId: String, callback: NSData -> Void){
         let urlString = "http://demo-ap08-prod.apigee.net/v1/accounts/" + accountId
         let completionHandler = createCompletionHandler(callback)
         getHttpRequest(urlString, completionHandler: completionHandler)
     }
     
-    func fetchMe(callback: Dictionary<String, AnyObject> -> Void){
+    func fetchMe(callback: NSData -> Void){
         let urlString = "http://demo-ap08-prod.apigee.net/v1/users/me"
         
         let completionHandler = createCompletionHandler(callback)
@@ -101,23 +101,34 @@ class MufgApiLogic: NSObject {
         task.resume()
     }
     
-    func createCompletionHandler(logic: Dictionary<String, AnyObject> -> Void)-> (NSData?, NSURLResponse?, NSError?)-> Void{
+    func createCompletionHandler(logic: NSData -> Void)-> (NSData?, NSURLResponse?, NSError?)-> Void{
         let completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void = { data, response, error in
             if (error == nil) {
-                let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-                
-                do {
-                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions()) as! Dictionary<String, AnyObject>
-                    logic(json)
-                } catch {
-                    print(error)
-                }
-                result
+                logic(data!)
             } else {
                 print(error)
             }
         }
         return completionHandler
     }
+
+    func jsonToArray(data: NSData) -> Array<Dictionary<String, AnyObject>>?{
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as! Array<Dictionary<String, AnyObject>>
+            return json
+        } catch {
+            print(error)
+            return nil
+        }
+    }
     
+    func jsonToDict(data: NSData) -> Dictionary<String, AnyObject>?{
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as! Dictionary<String, AnyObject>
+            return json
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 }
