@@ -51,7 +51,6 @@ class ManagementViewController: UIViewController {
         
         self.logic.fetchMe(logic)
         
-//        doTransferAPI()
     }
     
     func format(i:Int)-> String{

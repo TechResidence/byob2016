@@ -62,7 +62,7 @@ class PaymentViewController: UIViewController {
 			print("Go to Ryoshu-sho page")
             
             //API start
-//            doTransferAPI()
+            doTransferAPI()
             
 			motionManager.stopAccelerometerUpdates()
 			
