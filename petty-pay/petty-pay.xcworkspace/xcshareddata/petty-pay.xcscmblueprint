@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F9544E293C5B6C1FF3E24902485434AF6DC59888",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F9544E293C5B6C1FF3E24902485434AF6DC59888" : 0,
+    "80A5F46EA4FEC11A9621137B37747BFB3ECB3838" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4F653873-1A61-439B-917A-22DA66ECB2E2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F9544E293C5B6C1FF3E24902485434AF6DC59888" : "byob2016\/",
+    "80A5F46EA4FEC11A9621137B37747BFB3ECB3838" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "petty-pay",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "petty-pay\/petty-pay.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Asuka52\/DecoCamera.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80A5F46EA4FEC11A9621137B37747BFB3ECB3838"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:TechResidence\/byob2016.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F9544E293C5B6C1FF3E24902485434AF6DC59888"
+    }
+  ]
+}
