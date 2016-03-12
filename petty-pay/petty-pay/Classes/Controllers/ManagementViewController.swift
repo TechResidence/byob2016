@@ -30,25 +30,25 @@ class ManagementViewController: UIViewController {
         super.viewWillAppear(animated)
         
         
-//        let logic:Dictionary<String, AnyObject> -> Void = { user in
-//            print(user)
-//            let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
-//            let accountId = accounts[0]["account_id"] as! String
-//            let userName = user["user_name"] as! String
-//            
-//            let logic_:Dictionary<String, AnyObject> -> Void = {account in
-//                let balance = account["balance"] as! Int
-//                
-//                dispatch_async(dispatch_get_main_queue()) {
-//                    self.amountLabel.text = "¥" + String(balance)
-//                    self.userLabel.text = userName
-//                    self.dateLabel.text = "2016/03/12"
-//                }
-//            }
-//            self.logic.fetchAccountDetail(accountId, callback: logic_)
-//        }
-//        
-//        self.logic.fetchMe(logic)
+        let logic:Dictionary<String, AnyObject> -> Void = { user in
+            print(user)
+            let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
+            let accountId = accounts[0]["account_id"] as! String
+            let userName = user["user_name"] as! String
+            
+            let logic_:Dictionary<String, AnyObject> -> Void = {account in
+                let balance = account["balance"] as! Int
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self.amountLabel.text = "¥" + String(balance)
+                    self.userLabel.text = userName
+                    self.dateLabel.text = "2016/03/12"
+                }
+            }
+            self.logic.fetchAccountDetail(accountId, callback: logic_)
+        }
+        
+        self.logic.fetchMe(logic)
     }
 
     /*
