@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreBluetooth
+import CoreMotion
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
     var window: UIWindow?
-    
+    let locationManager = CLLocationManager()
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -26,6 +29,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     , UIUserNotificationType.Alert], categories: nil)
         )
         
+        locationManager.delegate = self;
+        
+        if (CLLocationManager.authorizationStatus() != CLAuthorizationStatus.AuthorizedAlways) {
+            locationManager.requestAlwaysAuthorization()
+        }
+        
+        PeripheralManager.checkStateOfAdvertising()
+        
+        // Create Region
+        let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "pettypay")
+        locationManager.startMonitoringForRegion(region)
+                
         return true
     }
     
@@ -49,6 +64,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        // アプリがActiveな状態で通知を発生させた場合にも呼ばれるのでActiveでない場合のみ実行するように
+        // Ref: https://blog.hello-world.jp.net/ios/3542/
+        localPushRecieve(application, notification: notification)
+    }
+    
+    func localPushRecieve(application: UIApplication, notification: UILocalNotification) {
+        openConfirmationView()
+    }
+    
+    func openConfirmationView() {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID") as! MainTabViewController
+        mainTabViewController.showAlert()
+    }
+    
+    // ----------------------------------------
+    // Monitoring
+    // ----------------------------------------
+    
+    func locationManager(manager: CLLocationManager, didStartMonitoringForRegion region: CLRegion) {
+        print("Start Monitoring Region")
+//        sendLocalNotificationForMessage("Start Monitoring Region")
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        NSLog("locationManager failed: %@", error)
+    }
+    
+    func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        print("Enter Region")
+        sendLocalNotificationForMessage("Enter Region")
+        if(region.isMemberOfClass(CLBeaconRegion) && CLLocationManager.isRangingAvailable()) {
+            locationManager.startRangingBeaconsInRegion(region as! CLBeaconRegion)
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didExitRegion region: CLRegion) {
+        print("Exit Region")
+        sendLocalNotificationForMessage("Exit Region")
+        if(region.isMemberOfClass(CLBeaconRegion)) {
+            locationManager.stopRangingBeaconsInRegion(region as! CLBeaconRegion)
+        }
+    }
+    
+    func sendLocalNotificationForMessage(message: String!) {
+        let localNotification:UILocalNotification = UILocalNotification()
+        localNotification.alertBody = message
+        localNotification.soundName = UILocalNotificationDefaultSoundName
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
 }
 

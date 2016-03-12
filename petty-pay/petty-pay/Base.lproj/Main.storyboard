@@ -8,7 +8,7 @@
         <!--Main Tab View Controller-->
         <scene sceneID="BLP-TL-dR8">
             <objects>
-                <tabBarController id="gR4-ef-VlY" customClass="MainTabViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gR4-ef-VlY" customClass="MainTabViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vto-U4-yxl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
