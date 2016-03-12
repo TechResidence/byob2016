@@ -31,7 +31,6 @@ class ManagementViewController: UIViewController {
         
         
         let logic:Dictionary<String, AnyObject> -> Void = { user in
-            print(user)
             let accounts = user["my_accounts"] as! Array<Dictionary<String, AnyObject>>
             let accountId = accounts[0]["account_id"] as! String
             let userName = user["user_name"] as! String

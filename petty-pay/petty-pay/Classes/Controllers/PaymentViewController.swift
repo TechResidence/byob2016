@@ -45,7 +45,6 @@ class PaymentViewController: UIViewController {
 		let m = sqrt(x * x + y * y + z * z)
 		if m > 5 {
 			print(m)
-			print("Go to Ryoshu-sho page")
 			motionManager.stopAccelerometerUpdates()
 			
 			let mainStoryboard: UIStoryboard = UIStoryboard(name: "Payment", bundle: nil)
