@@ -120,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("Enter Region")
-        sendLocalNotificationForMessage("Enter Region")
+        sendLocalNotificationForMessage("支払いの請求がありました")
         if(region.isMemberOfClass(CLBeaconRegion) && CLLocationManager.isRangingAvailable()) {
             locationManager.startRangingBeaconsInRegion(region as! CLBeaconRegion)
         }
