@@ -33,6 +33,10 @@ class ChargingViewController: UIViewController {
 		}
 	}
 	
+    @IBAction func cancelCharge(sender: UIButton) {
+        goToHome()
+    }
+    
 	@IBAction func alerting(sender: UIButton) {
 		ClosureAlert.showAlert(self, title: "受領完了", message: "支払いが行われました",
             completion: completeAction
