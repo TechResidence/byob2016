@@ -19,10 +19,10 @@ class ReceiptViewController: UIViewController {
     }
 	
 	@IBAction func exit(sender: AnyObject) {
-		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Management", bundle: nil)
-		let managementViewController = mainStoryboard.instantiateViewControllerWithIdentifier("managementViewControllerID")
-		self.presentViewController(managementViewController, animated: true) { () -> Void in
-        	    print("Show managementViewController")
+		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+		let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID")
+		self.presentViewController(mainTabViewController, animated: true) { () -> Void in
+        	    print("Show mainTabViewController")
         	}
 
 	}
