@@ -60,7 +60,7 @@ class PaymentViewController: UIViewController {
 		let m = sqrt(x * x + y * y + z * z)
 		if m > 5 {
 			print(m)
-            var player:AVAudioPlayer?
+        var player:AVAudioPlayer?
             
         let soundPath = (NSBundle.mainBundle().bundlePath as NSString).stringByAppendingPathComponent("coin.wav")
         let url:NSURL? = NSURL.fileURLWithPath(soundPath)
