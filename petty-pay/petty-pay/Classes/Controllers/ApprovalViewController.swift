@@ -12,7 +12,7 @@ class ApprovalViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    let defaultPurchases: [Purchase] = [
+    var defaultPurchases: [Purchase] = [
         Purchase(
             user: User(name: "小口元気", type: "営業", image: UIImage(named: "prof01")!),
             item: Item(name: "接待費", type: "購入", price: 3000)
@@ -40,6 +40,28 @@ class ApprovalViewController: UIViewController, UITableViewDelegate, UITableView
         let purchase = defaultPurchases[indexPath.row]
         approvalTableViewCell.construct(purchase)
         return approvalTableViewCell
+    }
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let editAction =
+        UITableViewRowAction(style: .Normal, // 削除等の破壊的な操作を示さないスタイル
+            title: "承認") {
+                (action, indexPath) in
+                print("\(indexPath) edited")
+                self.defaultPurchases.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        editAction.backgroundColor = UIColor.greenColor()
+        let deleteAction =
+        UITableViewRowAction(style: .Default, // 標準のスタイル
+            title: "否認") {
+                (action, indexPath) in
+                print("\(indexPath) deleted")
+                self.defaultPurchases.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+        }
+        deleteAction.backgroundColor = UIColor.redColor()
+        return [editAction, deleteAction]
     }
     
 }
