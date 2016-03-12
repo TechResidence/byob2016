@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,20 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bk2" translatesAutoresizingMaskIntoConstraints="NO" id="nsH-b0-GTS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bk2" translatesAutoresizingMaskIntoConstraints="NO" id="nsH-b0-GTS">
                                 <rect key="frame" x="0.0" y="0.0" width="379" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="2OS-3J-aVW"/>
+                                    <constraint firstAttribute="width" constant="379" id="xt5-N1-IDD"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-V8-b5r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="name02" translatesAutoresizingMaskIntoConstraints="NO" id="ftm-sF-bWw">
+                                <rect key="frame" x="69" y="163" width="240" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="1vF-zR-HGV"/>
+                                    <constraint firstAttribute="width" constant="240" id="pnQ-5p-bHw"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-V8-b5r">
                                 <rect key="frame" x="87" y="254" width="196" height="184"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="184" id="Aer-SE-Wzw"/>
+                                    <constraint firstAttribute="width" constant="196" id="SvX-35-dak"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-Pe-NXB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-Pe-NXB">
                                 <rect key="frame" x="106" y="226" width="162" height="40"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="name02" translatesAutoresizingMaskIntoConstraints="NO" id="ftm-sF-bWw">
-                                <rect key="frame" x="69" y="135" width="240" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="162" id="ElO-tE-1ux"/>
+                                    <constraint firstAttribute="height" constant="40" id="jnJ-oZ-BVD"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ftm-sF-bWw" secondAttribute="trailing" constant="46" id="1AX-k3-FVt"/>
+                            <constraint firstItem="ftm-sF-bWw" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="49" id="G2C-eM-g0C"/>
+                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="top" secondItem="ftm-sF-bWw" secondAttribute="bottom" constant="63" id="Qay-5t-8Zu"/>
+                            <constraint firstItem="ftm-sF-bWw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="143" id="Qg6-MS-AZk"/>
+                            <constraint firstItem="nsH-b0-GTS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="THs-bH-9GQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JYV-Pe-NXB" secondAttribute="trailing" constant="87" id="ZqX-oV-zWz"/>
+                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="67" id="bxh-vb-JeU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t1Z-V8-b5r" secondAttribute="trailing" constant="72" id="gDx-c0-Khv"/>
+                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="86" id="gQj-Za-kFS"/>
+                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="top" secondItem="ftm-sF-bWw" secondAttribute="bottom" constant="35" id="lRK-hM-VQT"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
