@@ -26,7 +26,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ショップ" id="NEV-Gy-j9W"/>
+                    <tabBarItem key="tabBarItem" title="ショップ" image="shop" id="NEV-Gy-j9W"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMP-Ea-8SM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -34,4 +34,7 @@
             <point key="canvasLocation" x="-143" y="-2409"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shop" width="50" height="50"/>
+    </resources>
 </document>

@@ -74,7 +74,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="管理" id="dhN-Gt-Sdv"/>
+                    <tabBarItem key="tabBarItem" title="管理" image="manage" id="dhN-Gt-Sdv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -90,5 +90,6 @@
         <image name="box" width="341" height="99"/>
         <image name="en01" width="240" height="240"/>
         <image name="graph_menu" width="248" height="294"/>
+        <image name="manage" width="50" height="50"/>
     </resources>
 </document>
