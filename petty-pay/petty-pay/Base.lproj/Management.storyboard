@@ -129,10 +129,12 @@
         <image name="1" width="212" height="219"/>
         <image name="2" width="212" height="219"/>
         <image name="3" width="197" height="195"/>
+        <image name="PettyPayIcon" width="1200" height="1200"/>
         <image name="bk_small-1" width="110" height="29"/>
         <image name="box" width="341" height="99"/>
         <image name="en01" width="240" height="240"/>
         <image name="graph_menu" width="248" height="294"/>
         <image name="manage" width="30" height="30"/>
+        <image name="plus" width="69" height="68"/>		
     </resources>
 </document>
