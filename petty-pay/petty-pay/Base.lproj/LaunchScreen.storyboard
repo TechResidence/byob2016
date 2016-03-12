@@ -32,39 +32,32 @@
                                     <constraint firstAttribute="height" constant="28" id="zhF-D8-kyr"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-Pe-NXB">
-                                <rect key="frame" x="71" y="143" width="240" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="name" translatesAutoresizingMaskIntoConstraints="NO" id="JYV-Pe-NXB">
+                                <rect key="frame" x="100" y="173" width="183" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="dA1-bH-0J6"/>
-                                    <constraint firstAttribute="width" constant="240" id="jCt-q7-vlr"/>
+                                    <constraint firstAttribute="width" constant="183" id="8hh-T3-8wh"/>
+                                    <constraint firstAttribute="height" constant="45" id="P6i-iU-APd"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-V8-b5r">
-                                <rect key="frame" x="52" y="272" width="278" height="245"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="PettyPayIcon" translatesAutoresizingMaskIntoConstraints="NO" id="t1Z-V8-b5r">
+                                <rect key="frame" x="87" y="254" width="209" height="184"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="245" id="CxQ-gC-IZB"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="I17-Y5-QHh"/>
-                                    <constraint firstAttribute="height" constant="270" id="fhx-hY-iXc"/>
-                                    <constraint firstAttribute="width" constant="270" id="zDa-q0-xSM"/>
+                                    <constraint firstAttribute="height" constant="184" id="n2d-uf-M3s"/>
+                                    <constraint firstAttribute="width" constant="209" id="reO-VX-pSy"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="fhx-hY-iXc"/>
-                                        <exclude reference="zDa-q0-xSM"/>
-                                    </mask>
-                                </variation>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="top" secondItem="JYV-Pe-NXB" secondAttribute="bottom" constant="36" id="1Rd-TZ-hL6"/>
+                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="80" id="4fX-dt-TqR"/>
                             <constraint firstItem="nsH-b0-GTS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="9wP-Ec-7z4"/>
-                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="top" secondItem="JYV-Pe-NXB" secondAttribute="bottom" constant="69" id="Big-Ge-vCw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t1Z-V8-b5r" secondAttribute="trailing" constant="59" id="Cm0-WU-d9J"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JYV-Pe-NXB" secondAttribute="trailing" constant="72" id="M1T-i6-Hnz"/>
+                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="top" secondItem="ftm-sF-bWw" secondAttribute="bottom" constant="53" id="SFr-iN-kM4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nsH-b0-GTS" secondAttribute="trailing" constant="-20" id="WEe-Jn-gB3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JYV-Pe-NXB" secondAttribute="trailing" constant="48" id="bAH-aF-Flm"/>
-                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="36" id="d2O-Rx-HvR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="t1Z-V8-b5r" secondAttribute="trailing" constant="29" id="fYN-3c-rLH"/>
-                            <constraint firstItem="JYV-Pe-NXB" firstAttribute="top" secondItem="ftm-sF-bWw" secondAttribute="bottom" constant="23" id="iAa-67-PJa"/>
                             <constraint firstItem="ftm-sF-bWw" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="72" id="jTs-Tk-0J8"/>
+                            <constraint firstItem="t1Z-V8-b5r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="67" id="o6x-2l-cua"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ftm-sF-bWw" secondAttribute="trailing" constant="48" id="ow5-bM-zCI"/>
                         </constraints>
                     </view>
