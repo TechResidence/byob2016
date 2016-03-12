@@ -9,7 +9,7 @@
         <!--Management-->
         <scene sceneID="ThF-9p-YQb">
             <objects>
-                <viewController title="Management" id="DlH-cs-NPV" customClass="ManagementViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Management" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DlH-cs-NPV" customClass="ManagementViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fOx-dO-6OX"/>
                         <viewControllerLayoutGuide type="bottom" id="6CL-Y4-gmv"/>
@@ -87,7 +87,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsV-o6-mvc">
                                 <rect key="frame" x="153" y="171" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2016年3月" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4E-7b-yzU">
@@ -135,6 +135,6 @@
         <image name="en01" width="240" height="240"/>
         <image name="graph_menu" width="248" height="294"/>
         <image name="manage" width="30" height="30"/>
-        <image name="plus" width="69" height="68"/>		
+        <image name="plus" width="69" height="68"/>
     </resources>
 </document>
