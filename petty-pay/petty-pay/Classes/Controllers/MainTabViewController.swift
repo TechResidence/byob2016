@@ -9,13 +9,26 @@
 import UIKit
 
 class MainTabViewController: UITabBarController, UIAlertViewDelegate {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidAppear(animated: Bool) {
+        let ud = NSUserDefaults.standardUserDefaults()
+        let token = ud.objectForKey("token") as? String
+        
+        if let _ = token {
+            return
+        }
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let webAPIViewController = mainStoryboard.instantiateViewControllerWithIdentifier("webAPIViewControllerID") as! WebAPIViewController
+        self.presentViewController(webAPIViewController, animated: true) { () -> Void in
+            print("Show webAPIViewController")
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -29,5 +42,5 @@ class MainTabViewController: UITabBarController, UIAlertViewDelegate {
         alert.addButtonWithTitle("OK")
         alert.show()
     }
-
+    
 }

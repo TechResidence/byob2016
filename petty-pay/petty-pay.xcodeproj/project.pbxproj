@@ -29,6 +29,8 @@
 		7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */; };
 		7D953F541C9452DE009403A2 /* PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D953F531C9452DE009403A2 /* PeripheralManager.swift */; };
 		7D953F561C94531D009403A2 /* MalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D953F551C94531D009403A2 /* MalletViewController.swift */; };
+		7D953F581C946835009403A2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D953F571C946835009403A2 /* LoginViewController.swift */; };
+		7D953F5A1C946B56009403A2 /* WebAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D953F591C946B56009403A2 /* WebAPIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		7D2CFB141C94369100073B5D /* ApprovalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalTableViewCell.swift; sourceTree = "<group>"; };
 		7D953F531C9452DE009403A2 /* PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeripheralManager.swift; path = Classes/Managers/PeripheralManager.swift; sourceTree = "<group>"; };
 		7D953F551C94531D009403A2 /* MalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalletViewController.swift; sourceTree = "<group>"; };
+		7D953F571C946835009403A2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7D953F591C946B56009403A2 /* WebAPIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,8 @@
 				7D2CFAF71C93FFCB00073B5D /* PaymentViewController.swift */,
 				7D2CFAF91C93FFD800073B5D /* ShopViewController.swift */,
 				7D2CFAFB1C94007F00073B5D /* MainTabViewController.swift */,
+				7D953F571C946835009403A2 /* LoginViewController.swift */,
+				7D953F591C946B56009403A2 /* WebAPIViewController.swift */,
 			);
 			name = Controllers;
 			path = Classes/Controllers;
@@ -314,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D953F581C946835009403A2 /* LoginViewController.swift in Sources */,
 				7D2CFAF01C93EC7100073B5D /* AppDelegate.swift in Sources */,
 				7D2CFB101C94323400073B5D /* Item.swift in Sources */,
 				7D2CFAFC1C94007F00073B5D /* MainTabViewController.swift in Sources */,
@@ -322,6 +329,7 @@
 				7D2CFB0E1C942BFF00073B5D /* User.swift in Sources */,
 				7D2CFB121C94329600073B5D /* Purchase.swift in Sources */,
 				7D2CFAF21C93FF7700073B5D /* ManagementViewController.swift in Sources */,
+				7D953F5A1C946B56009403A2 /* WebAPIViewController.swift in Sources */,
 				7D953F561C94531D009403A2 /* MalletViewController.swift in Sources */,
 				7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */,
 				7D953F541C9452DE009403A2 /* PeripheralManager.swift in Sources */,

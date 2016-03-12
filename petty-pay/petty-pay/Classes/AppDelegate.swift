@@ -11,11 +11,16 @@ import CoreLocation
 import CoreBluetooth
 import CoreMotion
 
+protocol WebActionDelegate{
+    func modalDidFinished()
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
     
     var window: UIWindow?
     let locationManager = CLLocationManager()
+    var delegate: WebActionDelegate! = nil
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -116,6 +121,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         localNotification.alertBody = message
         localNotification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+    
+    // Custom URL shceme
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+        print(url.fragment)
+        
+        let ss = NSString(string: url.fragment!)
+        let sss:String = ss.substringFromIndex(37)
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.setObject(sss, forKey: "token")
+        
+        //        let viewController = ViewController()
+        //        self.dis
+        self.delegate.modalDidFinished()
+        
+        return true
     }
 }
 
