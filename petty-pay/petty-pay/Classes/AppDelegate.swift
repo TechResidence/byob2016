@@ -45,7 +45,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Create Region
         let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "pettypay")
         locationManager.startMonitoringForRegion(region)
-                
+        
+        // アプリを終了していた際に、通知からの復帰をチェック
+        if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
+            localPushRecieve(application, notification: notification)
+        }
+        
         return true
     }
     
@@ -71,6 +76,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    //
+    // Notification handling
+    //
+    
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         // アプリがActiveな状態で通知を発生させた場合にも呼ばれるのでActiveでない場合のみ実行するように
         // Ref: https://blog.hello-world.jp.net/ios/3542/
@@ -82,9 +91,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     }
     
     func openConfirmationView() {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID") as! MainTabViewController
-        mainTabViewController.showAlert()
+        let paymentStoryboard: UIStoryboard = UIStoryboard(name: "Payment", bundle: nil)
+        let paymentViewController = paymentStoryboard.instantiateViewControllerWithIdentifier("paymentViewControllerID") as! PaymentViewController
+        
+        if let rootViewController = self.window?.rootViewController {
+            rootViewController.presentViewController(paymentViewController, animated: true, completion: { () -> Void in
+                print("Open paymentViewController")
+            })
+        } else {
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID") as! MainTabViewController
+            mainTabViewController.showAlert()
+        }
     }
     
     // ----------------------------------------
@@ -93,7 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didStartMonitoringForRegion region: CLRegion) {
         print("Start Monitoring Region")
-//        sendLocalNotificationForMessage("Start Monitoring Region")
+        //        sendLocalNotificationForMessage("Start Monitoring Region")
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {

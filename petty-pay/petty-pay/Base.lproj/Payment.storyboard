@@ -8,7 +8,7 @@
         <!--Payment-->
         <scene sceneID="Zck-J0-wMW">
             <objects>
-                <viewController title="Payment" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u2O-A8-gt2" customClass="PaymentViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="paymentViewControllerID" title="Payment" useStoryboardIdentifierAsRestorationIdentifier="YES" id="u2O-A8-gt2" customClass="PaymentViewController" customModule="petty_pay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7St-s1-Atb"/>
                         <viewControllerLayoutGuide type="bottom" id="L9w-di-w37"/>
