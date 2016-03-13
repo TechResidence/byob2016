@@ -51,18 +51,11 @@ class ChargingViewController: UIViewController {
 	// ------------------------------------------------
 	// Define action when complete or cancel
 	// ------------------------------------------------
-
-	func showMainStoryboard() {
-		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-		let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID")
-		self.presentViewController(mainTabViewController, animated: true) { () -> Void in
-        	    print("Show mainTabViewController")
-		}
-	}
 	
 	func completeOrCancelAction() {
 		PeripheralManager.stopAdvertising()
-		showMainStoryboard()
+		StoryboadHopper.showMain(self)
+		// showMainStoryboard()
 	}
 
 	func completeAction(isPositive: Bool) {
