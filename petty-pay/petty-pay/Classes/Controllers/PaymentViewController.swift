@@ -38,6 +38,15 @@ class PaymentViewController: UIViewController {
 		}
 	}
     
+    func changeAPI() {
+        let mufgApiLogic = MufgApiLogic()
+        
+        let logic:NSData -> Void = {result in
+            print("change done!------------")
+        }
+        mufgApiLogic.sendChangeStatus(logic)
+    }
+    
     func doTransferAPI() {
         let mufgApiLogic = MufgApiLogic()
         
@@ -70,6 +79,9 @@ class PaymentViewController: UIViewController {
             
             //API start
             doTransferAPI()
+            
+            //柴田のserverに繋ぐ用。使わなければcomment out
+            changeAPI()
             
 			motionManager.stopAccelerometerUpdates()
 			

@@ -11,10 +11,41 @@ import UIKit
 class ChargingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //柴田のserverに繋ぐ用。使わなければcomment out
+        NSOperationQueue().addOperationWithBlock({ () -> Void in
+            self.fetchAPI()
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func fetchAPI() {
+        let mufgApiLogic = MufgApiLogic()
+        var _flag = false
+        
+        let logic:NSData -> Void = {result in
+            let obj = mufgApiLogic.jsonToDict(result)!
+            let flag = obj["name"] as! String
+            if flag == "true"{
+                _flag = true
+                ClosureAlert.showAlert(self, title: "受領完了", message: "支払いが行われました",
+                    completion: self.completeAction
+                )
+                print("status changed!")
+            }else{
+                print("polling ...")
+            }
+        }
+        
+        for _ in 0...100000 {
+            if !_flag {
+                sleep(1)
+                mufgApiLogic.fetchStatus(logic)
+            }
+        }
     }
 
 	func goToHome() {
