@@ -11,32 +11,46 @@ import CoreMotion
 import AVFoundation
 
 class PaymentViewController: UIViewController {
-
-	// Create Motion Manager and Handler
-	let motionManager = CMMotionManager()
-
+    
+    // Create Motion Manager and Handler
+    let motionManager = CMMotionManager()
+    var _ssId01:SystemSoundID = 0
+    
+    var shakeFlag = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-		startMotionSensing()
+        startMotionSensing()
+        doReady()
     }
-
+    
+    func doReady(){
+        // 音楽ファイルの参照
+        let bnd:NSBundle = NSBundle.mainBundle()
+        
+        // 設定#01
+        let url01 = NSURL(fileURLWithPath: bnd.pathForResource("coin", ofType: "wav")!)
+        
+        AudioServicesCreateSystemSoundID(url01, &_ssId01)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-	func startMotionSensing() {
-		if (!motionManager.accelerometerActive) {
-			motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler:accelermeterHandler)
-		}
-	}
-	
-	func stopMotionSensing() {
-		if (motionManager.accelerometerActive) {
-			   motionManager.stopAccelerometerUpdates()
-		}
-	}
+    
+    func startMotionSensing() {
+        if (!motionManager.accelerometerActive) {
+            motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler:accelermeterHandler)
+        }
+    }
+    
+    func stopMotionSensing() {
+        if (motionManager.accelerometerActive) {
+            motionManager.stopAccelerometerUpdates()
+        }
+    }
     
     func changeAPI() {
         let mufgApiLogic = MufgApiLogic()
@@ -92,5 +106,4 @@ class PaymentViewController: UIViewController {
         	}
 		}
 	}
-
 }

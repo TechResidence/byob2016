@@ -12,37 +12,18 @@ import UIKit
 class ManagementViewController: UIViewController {
     
     let logic = MufgApiLogic()
-    var _ssId01:SystemSoundID = 0
 
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        doReady()
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func doReady(){
-        
-        print("サウンド")
-        
-        // 音楽ファイルの参照
-        let bnd:NSBundle = NSBundle.mainBundle()
-        
-        // 設定#01
-        let url01 = NSURL(fileURLWithPath: bnd.pathForResource("coin", ofType: "wav")!)
-        
-        AudioServicesCreateSystemSoundID(url01, &_ssId01)
-        AudioServicesPlaySystemSound ( _ssId01 )
-        
-        print("サウンド2")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -69,10 +50,6 @@ class ManagementViewController: UIViewController {
         }
         
         self.logic.fetchMe(logic)
-        
-        print("play sound")
-        
-        AudioServicesPlaySystemSound(_ssId01)
     }
     
     func format(i:Int)-> String{
