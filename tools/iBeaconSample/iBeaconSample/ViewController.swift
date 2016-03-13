@@ -8,8 +8,12 @@
 
 import UIKit
 import CoreLocation
+import AVFoundation
+import AudioToolbox
 
 class ViewController: UIViewController {
+    
+    var _ssId01:SystemSoundID = 0
     
     let ud = NSUserDefaults.standardUserDefaults()
     @IBOutlet weak var myUserTextView: UITextView!
@@ -18,11 +22,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doReady()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func doReady(){
+        
+        print("サウンド")
+        
+        // 音楽ファイルの参照
+        let bnd:NSBundle = NSBundle.mainBundle()
+        
+        // 設定#01
+        let url01 = NSURL(fileURLWithPath: bnd.pathForResource("coin", ofType: "wav")!)
+        
+        AudioServicesCreateSystemSoundID(url01, &_ssId01)
+        AudioServicesPlaySystemSound ( _ssId01 )
+        
+        print("サウンド2")
     }
     
     func postHttpRequest(url:String, postData: NSData, completionHandler: (NSData?, NSURLResponse?, NSError?)-> Void)->Void{
@@ -117,13 +138,17 @@ class ViewController: UIViewController {
     
     @IBAction func transfer(sender: AnyObject) {
         
-        let logic:Dictionary<String, AnyObject> -> Void = {result in
-            print(result)
-            dispatch_async(dispatch_get_main_queue()) {
-                self.transferTextView.text = "done"
-            }
-        }
-        self.sendTransferRequest("3453829144", toAccountId: "7406176", amount: 1000, callback: logic)
+        print("play sound")
+        
+        AudioServicesPlaySystemSound(_ssId01)
+        
+//        let logic:Dictionary<String, AnyObject> -> Void = {result in
+//            print(result)
+//            dispatch_async(dispatch_get_main_queue()) {
+//                self.transferTextView.text = "done"
+//            }
+//        }
+//        self.sendTransferRequest("3453829144", toAccountId: "7406176", amount: 1000, callback: logic)
     }
     
     func fetchMe(callback: Dictionary<String, AnyObject> -> Void){
