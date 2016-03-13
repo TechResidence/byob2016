@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         // Create Region
         let region = CLBeaconRegion(proximityUUID: NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")!, identifier: "pettypay")
         locationManager.startMonitoringForRegion(region)
-        
+				
         // アプリを終了していた際に、通知からの復帰をチェック
         if let notification = launchOptions?[UIApplicationLaunchOptionsLocalNotificationKey] as? UILocalNotification {
             localPushRecieve(application, notification: notification)
@@ -120,7 +120,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func locationManager(manager: CLLocationManager, didEnterRegion region: CLRegion) {
         print("Enter Region")
-        sendLocalNotificationForMessage("支払いの請求がありました")
+        sendLocalNotificationForMessage("Enter Region")
         if(region.isMemberOfClass(CLBeaconRegion) && CLLocationManager.isRangingAvailable()) {
             locationManager.startRangingBeaconsInRegion(region as! CLBeaconRegion)
         }
@@ -133,7 +133,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
             locationManager.stopRangingBeaconsInRegion(region as! CLBeaconRegion)
         }
     }
-    
+	
+	// ----------------------------------------
+	// Ranging
+	// ----------------------------------------
+	
+	func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
+		// let proximities = beacons.map({x in x.proximity.rawValue})
+		if let beacon = beacons.first {
+			if (beacon.proximity == CLProximity.Immediate || beacon.proximity == CLProximity.Near) {
+				// Immediate 1, Near 2, Far 3, Unknown 0
+				if(region.isMemberOfClass(CLBeaconRegion)) {
+				    print("Stop Ranging")
+					locationManager.stopRangingBeaconsInRegion(region)
+				}
+		        sendLocalNotificationForMessage("支払いの請求がありました") // showAlert()
+			}
+		}
+	}
+
+	// ----------------------------------------
+	// Notification
+	// ----------------------------------------
+	
     func sendLocalNotificationForMessage(message: String!) {
         let localNotification:UILocalNotification = UILocalNotification()
         localNotification.alertBody = message

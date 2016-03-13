@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ReceiptViewController: UIViewController {
+
+class ReceiptViewController: UIViewController, CLLocationManagerDelegate {
+    let ud = NSUserDefaults.standardUserDefaults()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,11 +23,10 @@ class ReceiptViewController: UIViewController {
     }
 	
 	@IBAction func exit(sender: AnyObject) {
-		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-		let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID")
-		self.presentViewController(mainTabViewController, animated: true) { () -> Void in
-        	    print("Show mainTabViewController")
-        	}
 
+//	    if(region.isMemberOfClass(CLBeaconRegion) && CLLocationManager.isRangingAvailable()) {
+//            locationManager.startRangingBeaconsInRegion(region)
+//        }
+		StoryboadHopper.showMain(self)
 	}
 }
