@@ -25,6 +25,10 @@ GET      /mufg/userMe  controllers.oauth.MUFGOauthController.userMe()
 
 GET      /mufg/furikomi  controllers.oauth.MUFGOauthController.furikomi()
 
+GET      /status/change  controllers.JsonController.change()
+GET      /status/changeFalse  controllers.JsonController.changeFalse()
+GET      /status/fetch  controllers.JsonController.fetch()
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
