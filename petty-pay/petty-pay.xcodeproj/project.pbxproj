@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		281ABD391C949BE400107061 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281ABD381C949BE400107061 /* ReceiptViewController.swift */; };
 		281ABD3D1C94A2B300107061 /* ChargingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281ABD3C1C94A2B300107061 /* ChargingViewController.swift */; };
+		28E1BA271C954B880059E35A /* StoryboadHopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E1BA261C954B880059E35A /* StoryboadHopper.swift */; };
 		478D812A1C9485C600BD9801 /* MufgApiLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81291C9485C600BD9801 /* MufgApiLogic.swift */; };
 		478D81321C94F4AD00BD9801 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 478D81311C94F4AD00BD9801 /* coin.wav */; };
 		7D2CFAC91C93D29C00073B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFAC71C93D29C00073B5D /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		281ABD381C949BE400107061 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		281ABD3C1C94A2B300107061 /* ChargingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingViewController.swift; sourceTree = "<group>"; };
+		28E1BA261C954B880059E35A /* StoryboadHopper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboadHopper.swift; sourceTree = "<group>"; };
 		478D81291C9485C600BD9801 /* MufgApiLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MufgApiLogic.swift; path = Classes/Managers/MufgApiLogic.swift; sourceTree = "<group>"; };
 		478D81311C94F4AD00BD9801 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
 		7D2CFAC01C93D29C00073B5D /* petty-pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "petty-pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,13 +168,13 @@
 				7D2CFAF11C93FF7700073B5D /* ManagementViewController.swift */,
 				7D2CFAF31C93FF9300073B5D /* ApprovalViewController.swift */,
 				7D2CFAF51C93FFB600073B5D /* ChargeViewController.swift */,
+				281ABD3C1C94A2B300107061 /* ChargingViewController.swift */,
 				7D2CFAF71C93FFCB00073B5D /* PaymentViewController.swift */,
 				7D2CFAF91C93FFD800073B5D /* ShopViewController.swift */,
 				7D2CFAFB1C94007F00073B5D /* MainTabViewController.swift */,
 				7D953F571C946835009403A2 /* LoginViewController.swift */,
 				7D953F591C946B56009403A2 /* WebAPIViewController.swift */,
 				281ABD381C949BE400107061 /* ReceiptViewController.swift */,
-				281ABD3C1C94A2B300107061 /* ChargingViewController.swift */,
 			);
 			name = Controllers;
 			path = Classes/Controllers;
@@ -217,6 +219,7 @@
 			children = (
 				7D953F531C9452DE009403A2 /* PeripheralManager.swift */,
 				478D81291C9485C600BD9801 /* MufgApiLogic.swift */,
+				28E1BA261C954B880059E35A /* StoryboadHopper.swift */,
 			);
 			name = Managers;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				7D2CFB121C94329600073B5D /* Purchase.swift in Sources */,
 				7D2CFAF21C93FF7700073B5D /* ManagementViewController.swift in Sources */,
 				7D953F5A1C946B56009403A2 /* WebAPIViewController.swift in Sources */,
+				28E1BA271C954B880059E35A /* StoryboadHopper.swift in Sources */,
 				7D953F561C94531D009403A2 /* MalletViewController.swift in Sources */,
 				7D2CFB161C94369100073B5D /* ApprovalTableViewCell.swift in Sources */,
 				7D953F541C9452DE009403A2 /* PeripheralManager.swift in Sources */,

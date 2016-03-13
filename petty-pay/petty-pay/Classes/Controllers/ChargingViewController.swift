@@ -48,33 +48,45 @@ class ChargingViewController: UIViewController {
         }
     }
 
-	func goToHome() {
+	// ------------------------------------------------
+	// Define action when complete or cancel
+	// ------------------------------------------------
+
+	func showMainStoryboard() {
 		let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 		let mainTabViewController = mainStoryboard.instantiateViewControllerWithIdentifier("mainTabViewControllerID")
 		self.presentViewController(mainTabViewController, animated: true) { () -> Void in
         	    print("Show mainTabViewController")
 		}
 	}
+	
+	func completeOrCancelAction() {
+		PeripheralManager.stopAdvertising()
+		showMainStoryboard()
+	}
 
 	func completeAction(isPositive: Bool) {
 		if isPositive {
-			goToHome()
+			completeOrCancelAction()
 		} else {
 			// ngの処理
 		}
 	}
+
+	// ------------------------------------------------
+	// UI
+	// ------------------------------------------------
 	
-    @IBAction func cancelCharge(sender: UIButton) {
-        goToHome()
-    }
-    
 	@IBAction func alerting(sender: UIButton) {
 		ClosureAlert.showAlert(self, title: "受領完了", message: "支払いが行われました",
             completion: completeAction
         )
-
-
 	}
+	
+	@IBAction func cancelCharge(sender: UIButton) {
+		completeOrCancelAction()
+    }
+	
 }
 
 final class ClosureAlert {

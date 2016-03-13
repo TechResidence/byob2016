@@ -27,9 +27,8 @@ class ChargeViewController: UIViewController {
     }
     
     @IBAction func charge(sender: UIButton) {
-        print("charge!")
+		// Advertise iBeacon for charge
         if !PeripheralManager.isAdvertising() {
-            print("charge!!")
             PeripheralManager.startAdvertising()
         }
     }

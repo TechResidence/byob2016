@@ -16,11 +16,17 @@ class PeripheralManager: CBPeripheralManager {
     }
 
     static func startAdvertising() {
-		sharedInstance.startAdvertisingWithPeripheralManager(sharedInstance)
+		if sharedInstance.isAdvertising {
+			print("Start Advertising")
+			sharedInstance.startAdvertisingWithPeripheralManager(sharedInstance)
+		}
     }
 	
 	static func stopAdvertising() {
-		sharedInstance.stopAdvertising()
+		if sharedInstance.isAdvertising {
+			print("Stop Advertising")
+			sharedInstance.stopAdvertising()
+		}
     }
 	
 	static func isAdvertising() -> Bool {
