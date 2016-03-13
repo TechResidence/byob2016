@@ -12,6 +12,22 @@ class MufgApiLogic: NSObject {
     
     let ud = NSUserDefaults.standardUserDefaults()
     
+    func sendChangeStatus(callback: NSData -> Void){
+        
+        let urlString = "http://54.238.238.199:9000/status/change"
+        let completionHandler = self.createCompletionHandler(callback)
+        
+        self.getHttpRequest(urlString, completionHandler: completionHandler)
+    }
+    
+    func fetchStatus(callback: NSData -> Void){
+        
+        let urlString = "http://54.238.238.199:9000/status/fetch"
+        let completionHandler = self.createCompletionHandler(callback)
+        
+        self.getHttpRequest(urlString, completionHandler: completionHandler)
+    }
+    
     func sendApproveRequest(accountId: String, callback: NSData -> Void){
         
         let urlString = "http://demo-ap08-prod.apigee.net/v1/accounts/" + accountId + "/transfers?action=approve"
@@ -111,7 +127,7 @@ class MufgApiLogic: NSObject {
         }
         return completionHandler
     }
-
+    
     func jsonToArray(data: NSData) -> Array<Dictionary<String, AnyObject>>?{
         do {
             let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions()) as! Array<Dictionary<String, AnyObject>>
