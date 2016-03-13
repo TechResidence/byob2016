@@ -16,6 +16,7 @@
 		478D81181C93892100BD9801 /* iBeaconSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81171C93892100BD9801 /* iBeaconSampleUITests.swift */; };
 		478D81261C93F41800BD9801 /* WebAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81251C93F41800BD9801 /* WebAPIViewController.swift */; };
 		478D81281C942F7200BD9801 /* LogicHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81271C942F7200BD9801 /* LogicHelper.swift */; };
+		478D81301C94F14A00BD9801 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 478D812F1C94F14A00BD9801 /* coin.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		478D81191C93892100BD9801 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		478D81251C93F41800BD9801 /* WebAPIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAPIViewController.swift; sourceTree = "<group>"; };
 		478D81271C942F7200BD9801 /* LogicHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicHelper.swift; sourceTree = "<group>"; };
+		478D812F1C94F14A00BD9801 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = coin.wav; path = Assets.xcassets/coin.dataset/coin.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		478D80F61C93892000BD9801 /* iBeaconSample */ = {
 			isa = PBXGroup;
 			children = (
+				478D812F1C94F14A00BD9801 /* coin.wav */,
 				478D80F71C93892000BD9801 /* AppDelegate.swift */,
 				478D80F91C93892000BD9801 /* ViewController.swift */,
 				478D80FB1C93892000BD9801 /* Main.storyboard */,
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				478D81021C93892000BD9801 /* LaunchScreen.storyboard in Resources */,
+				478D81301C94F14A00BD9801 /* coin.wav in Resources */,
 				478D80FF1C93892000BD9801 /* Assets.xcassets in Resources */,
 				478D80FD1C93892000BD9801 /* Main.storyboard in Resources */,
 			);

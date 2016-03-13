@@ -10,6 +10,7 @@
 		281ABD391C949BE400107061 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281ABD381C949BE400107061 /* ReceiptViewController.swift */; };
 		281ABD3D1C94A2B300107061 /* ChargingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281ABD3C1C94A2B300107061 /* ChargingViewController.swift */; };
 		478D812A1C9485C600BD9801 /* MufgApiLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478D81291C9485C600BD9801 /* MufgApiLogic.swift */; };
+		478D81321C94F4AD00BD9801 /* coin.wav in Resources */ = {isa = PBXBuildFile; fileRef = 478D81311C94F4AD00BD9801 /* coin.wav */; };
 		7D2CFAC91C93D29C00073B5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFAC71C93D29C00073B5D /* Main.storyboard */; };
 		7D2CFACB1C93D29C00073B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFACA1C93D29C00073B5D /* Assets.xcassets */; };
 		7D2CFACE1C93D29C00073B5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D2CFACC1C93D29C00073B5D /* LaunchScreen.storyboard */; };
@@ -50,6 +51,7 @@
 		281ABD381C949BE400107061 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		281ABD3C1C94A2B300107061 /* ChargingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChargingViewController.swift; sourceTree = "<group>"; };
 		478D81291C9485C600BD9801 /* MufgApiLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MufgApiLogic.swift; path = Classes/Managers/MufgApiLogic.swift; sourceTree = "<group>"; };
+		478D81311C94F4AD00BD9801 /* coin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coin.wav; sourceTree = "<group>"; };
 		7D2CFAC01C93D29C00073B5D /* petty-pay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "petty-pay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D2CFAC81C93D29C00073B5D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D2CFACA1C93D29C00073B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		7D2CFAC21C93D29C00073B5D /* petty-pay */ = {
 			isa = PBXGroup;
 			children = (
+				478D81311C94F4AD00BD9801 /* coin.wav */,
 				7D2CFB0C1C940A6500073B5D /* Storyboards */,
 				7D2CFAE71C93EC1F00073B5D /* Supporting Files */,
 				7D2CFAE31C93E42F00073B5D /* Classes */,
@@ -308,6 +311,7 @@
 				7D2CFACE1C93D29C00073B5D /* LaunchScreen.storyboard in Resources */,
 				7D2CFB081C94097D00073B5D /* Payment.storyboard in Resources */,
 				7D2CFAFF1C94090E00073B5D /* Management.storyboard in Resources */,
+				478D81321C94F4AD00BD9801 /* coin.wav in Resources */,
 				7D2CFACB1C93D29C00073B5D /* Assets.xcassets in Resources */,
 				7D2CFB021C94095000073B5D /* Approval.storyboard in Resources */,
 				7D2CFB051C94096800073B5D /* Charge.storyboard in Resources */,
