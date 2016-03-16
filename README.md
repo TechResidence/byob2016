@@ -16,7 +16,7 @@ Setup completed (read-only access)
 =================== 
 CocoaPodsをつかう  
 1.使いたいプロジェクトファイルに移動  
-->pettypay  
+->petty-pay  
 2.ライブラリのインストール  
 $ pod install  
 Analyzing dependencies  
@@ -26,10 +26,10 @@ Generating Pods project
 Integrating client project  
 ※注意  
 この時にxcodeでプロジェクトファイルを開いていると、  
-[!] From now on use `testProject.xcworkspace`.  
+[!] From now on use `petty-pay.xcworkspace`.  
 と怒られてしまうので、xcodeを閉じてから実行する。  
 3.確認  
-実行したプロフェクトファイルにtestProject.xcworkspaceというファイルが作成されるので、  
+実行したプロフェクトファイルにpetty-pay.xcworkspaceというファイルが作成されるので、  
 xcodeprojではなく、こっちを開き、実行する。  
 4.他のライブラリをインストールするときは？  
 さっきのPodfileにライブラリを追加し、  
