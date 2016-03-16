@@ -1,9 +1,9 @@
 
-pettypay->SwiftSideMenu.xcodeproj  
+petty-pay->petty-pay.xcodeproj  
 
 CocoaPodsのインストール  
 
-MacにはデフォルトでRubyがインストールされているので、それ前提です。  
+MacにはデフォでRubyがインストールされているので、それ前提です。  
 1.ruby gemを最新にする  
 $ sudo gem update --system  
 2.インストール  
@@ -30,7 +30,7 @@ Integrating client project
 と怒られてしまうので、xcodeを閉じてから実行する。  
 3.確認  
 実行したプロフェクトファイルにtestProject.xcworkspaceというファイルが作成されるので、  
-xcodeprojではなく、こっちを開き、実行する。
+xcodeprojではなく、こっちを開き、実行する。  
 4.他のライブラリをインストールするときは？  
 さっきのPodfileにライブラリを追加し、  
 $ pod update  
