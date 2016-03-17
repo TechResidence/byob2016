@@ -29,6 +29,8 @@ Integrating client project
 [!] From now on use `petty-pay.xcworkspace`.  
 と怒られてしまうので、xcodeを閉じてから実行する。  
 3.確認  
+$ open petty-pay.xcworkspace    
+
 実行したプロフェクトファイルにpetty-pay.xcworkspaceというファイルが作成されるので、  
 xcodeprojではなく、こっちを開き、実行する。  
 4.他のライブラリをインストールするときは？  
